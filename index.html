@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LArPix Event Playback Visualizer</title>
+  <link rel="stylesheet" href="style.css?v=run-metrics-1">
+</head>
+<body>
+  <aside id="hud">
+    <h1>LArPix Event Playback</h1>
+    <div id="scenario">Scenario: loading...</div>
+    <div id="status">Tick: 0 / 0</div>
+    <div class="sep"></div>
+    <div class="controls">
+      <button id="playPause">Play</button>
+      <button id="stepBack">Step Back</button>
+      <button id="stepForward">Step</button>
+      <button id="reset">Reset</button>
+      <button id="showInstructions">Instructions</button>
+      <button id="showRunMetrics">Run Metrics</button>
+    </div>
+    <label class="row">
+      <span>Speed</span>
+      <input id="speed" type="range" min="1" max="120" value="12">
+    </label>
+    <label class="row">
+      <span>Tick</span>
+      <input id="scrubber" type="range" min="0" max="0" value="0">
+    </label>
+    <label class="row">
+      <span>Load JSON</span>
+      <input id="fileInput" type="file" accept="application/json,.json">
+    </label>
+    <div class="packet-filters">
+      <div class="small caps">Packet Types</div>
+      <label class="filter-item">
+        <input id="filterConfigWrite" type="checkbox" checked>
+        <span class="swatch packet-config-write"></span>
+        <span class="filter-label">config writes</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterConfigRead" type="checkbox" checked>
+        <span class="swatch packet-config-read"></span>
+        <span class="filter-label">config reads</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterEventData" type="checkbox" checked>
+        <span class="swatch packet-event-data"></span>
+        <span class="filter-label">data packets</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterOtherPacket" type="checkbox" checked>
+        <span class="swatch packet-other"></span>
+        <span class="filter-label">other packets</span>
+      </label>
+    </div>
+    <div class="packet-filters">
+      <div class="small caps">Visual Layers</div>
+      <label class="filter-item">
+        <input id="filterSharedFifo" type="checkbox" checked>
+        <span class="swatch shared-fifo"></span>
+        <span class="filter-label">shared fifo occupancy</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterPacketLabels" type="checkbox" checked>
+        <span class="swatch packet-labels"></span>
+        <span class="filter-label">packet labels</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterPersistentInjection" type="checkbox" checked>
+        <span class="swatch persistent-injection"></span>
+        <span class="filter-label">injected chips persist</span>
+      </label>
+    </div>
+    <div class="sep"></div>
+    <div class="small">Keys: <kbd>Space</kbd> play/pause, <kbd>S</kbd> step, <kbd>Z</kbd> step back, <kbd>R</kbd> reset</div>
+    <div class="small">Colors: <span class="swatch up"></span> upstream lane, <span class="swatch down"></span> downstream lane, <span class="swatch source-fpga"></span> source south downstream to FPGA, <span class="swatch inject"></span> charge injection</div>
+    <div class="sep"></div>
+    
+    <div id="dataPacketMetrics" class="hud-section">
+      <div class="small caps">Data Packet Metrics</div>
+      <div id="dataPacketMetricsSummary" class="small">Data packets: n/a</div>
+      <div id="dataPacketMetricsList" class="metrics-list"></div>
+    </div>
+    <div id="selection">Selection: none</div>
+  </aside>
+  <div id="hudResizeHandle" aria-label="Resize HUD" title="Drag to resize HUD"></div>
+  <div id="fpgaPopup" class="floating-panel hidden" aria-live="polite">
+    <div class="floating-panel-header">
+      <div id="fpgaPopupTitle">FPGA</div>
+      <button id="fpgaPopupClose" type="button">Close</button>
+    </div>
+    <div id="fpgaPopupBody" class="floating-panel-body"></div>
+  </div>
+  <div id="instructionsPopup" class="floating-panel hidden" aria-live="polite">
+    <div class="floating-panel-header">
+      <div>Instructions</div>
+      <button id="instructionsPopupClose" type="button">Close</button>
+    </div>
+    <div class="floating-panel-body">
+      <div class="fpga-card">
+        <div class="fpga-card-title">How To Explore</div>
+        <div class="fpga-label">Click on the FPGA square to see per-tick TX and RX packet activity at the FPGA.</div>
+        <div class="fpga-label">The popup shows the bit on the current tick, the packet word, and decoded packet fields, which is especially useful for configuration packets.</div>
+      </div>
+      <div class="fpga-card">
+        <div class="fpga-card-title">How To Run</div>
+        <div class="fpga-label">Use Play and Pause and Step Back and Step to see a tick-accurate recreation of network simulator results.</div>
+        <div class="fpga-label">You can also upload playback JSON files produced by other simulation runs.</div>
+      </div>
+      <div class="fpga-card">
+        <div class="fpga-card-title">Packet Loss</div>
+        <div class="fpga-label">Scroll down in the HUD to the <code>Data Packet Metrics</code> section to see packet generation, FPGA arrival counts, and packet-loss-related summary information.</div>
+      </div>
+      <div class="fpga-card">
+        <div class="fpga-card-title">Run Metrics</div>
+        <div class="fpga-label">Click the <code>Run Metrics</code> button to open the popup with ticks per second and total runtime for the run.</div>
+      </div>
+    </div>
+  </div>
+  <div id="runMetricsPopup" class="floating-panel hidden" aria-live="polite">
+    <div class="floating-panel-header">
+      <div>Run Metrics</div>
+      <button id="runMetricsPopupClose" type="button">Close</button>
+    </div>
+    <div id="runMetricsPopupBody" class="floating-panel-body"></div>
+  </div>
+  <canvas id="board"></canvas>
+  <script type="module" src="main.js?v=run-metrics-3"></script>
+</body>
+</html>

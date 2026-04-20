@@ -1,0 +1,319 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0d12;
+  color: #d9dde7;
+  font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  position: relative;
+  --hud-width: 320px;
+}
+
+#board {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: var(--hud-width);
+  max-width: min(70vw, 640px);
+  min-width: 260px;
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(10, 14, 20, 0.86);
+  border: 1px solid rgba(118, 132, 167, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#hud h1 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+#hudResizeHandle {
+  position: fixed;
+  top: 10px;
+  left: calc(10px + var(--hud-width) + 8px);
+  width: 10px;
+  height: calc(100vh - 20px);
+  cursor: ew-resize;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(118, 132, 167, 0.1), rgba(118, 132, 167, 0.28), rgba(118, 132, 167, 0.1));
+  transition: background 120ms ease, box-shadow 120ms ease;
+}
+
+#hudResizeHandle:hover,
+body.hud-resizing #hudResizeHandle {
+  background: linear-gradient(180deg, rgba(77, 176, 255, 0.25), rgba(77, 176, 255, 0.7), rgba(77, 176, 255, 0.25));
+  box-shadow: 0 0 0 1px rgba(77, 176, 255, 0.28);
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+button {
+  background: #1e2633;
+  color: #e8edf8;
+  border: 1px solid #324056;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #263145;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+input[type="range"], input[type="file"] {
+  width: 100%;
+}
+
+.sep {
+  height: 1px;
+  margin: 10px 0;
+  background: rgba(136, 149, 173, 0.2);
+}
+
+.small {
+  font-size: 12px;
+  color: #b7c0d3;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: #151c27;
+  border: 1px solid #2d394b;
+  font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin: 0 3px 0 6px;
+}
+
+.swatch.up { background: #4db0ff; }
+.swatch.down { background: #ffb04d; }
+.swatch.source-fpga { background: #b46cff; }
+.swatch.packet { background: #7cff7c; }
+
+.swatch.inject { background: #ff5e87; }
+
+
+.packet-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  margin: 10px 0 4px;
+  padding: 8px 10px;
+  border: 1px solid rgba(118, 132, 167, 0.2);
+  border-radius: 8px;
+  background: rgba(17, 23, 34, 0.7);
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  font-size: 12px;
+  color: #d9dde7;
+}
+
+.filter-item input {
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+}
+
+.filter-label {
+  line-height: 1.2;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.swatch.packet-config-write { background: #7cff7c; }
+.swatch.packet-config-read { background: #4db0ff; }
+.swatch.packet-event-data { background: #ff5e87; }
+.swatch.packet-other { background: #d7f06a; }
+
+.swatch.shared-fifo { background: #61e294; }
+.swatch.packet-labels { background: #c9d2e3; }
+.swatch.persistent-injection { background: #ff8fb0; }
+
+#runStats,
+#selection {
+  font-size: 12px;
+  color: #d9dde7;
+  margin-top: 8px;
+}
+
+#runStats {
+  color: #b7c0d3;
+}
+
+.hud-section {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid rgba(118, 132, 167, 0.2);
+  border-radius: 8px;
+  background: rgba(17, 23, 34, 0.7);
+}
+
+#dataPacketMetricsSummary {
+  margin-top: 6px;
+  line-height: 1.35;
+}
+
+.metrics-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.metrics-row {
+  font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #d9dde7;
+}
+
+.metrics-empty {
+  color: #9eabc2;
+}
+
+
+.floating-panel {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: min(420px, 34vw);
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 32px);
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(10, 14, 20, 0.94);
+  border: 1px solid rgba(180, 108, 255, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  z-index: 20;
+}
+
+.floating-panel.hidden {
+  display: none;
+}
+
+.floating-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(118, 132, 167, 0.22);
+  font: 13px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #f0e6ff;
+}
+
+.floating-panel-body {
+  max-height: calc(100vh - 88px);
+  overflow: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fpga-card {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(118, 132, 167, 0.2);
+  background: rgba(17, 23, 34, 0.84);
+}
+
+.fpga-card-title {
+  font: 12px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #d7a6ff;
+  margin-bottom: 6px;
+}
+
+.fpga-meta,
+.fpga-label,
+.fpga-word,
+.fpga-empty,
+.fpga-json {
+  font: 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.fpga-meta,
+.fpga-label,
+.fpga-word {
+  color: #d9dde7;
+}
+
+.fpga-empty {
+  color: #9eabc2;
+}
+
+.fpga-json {
+  white-space: pre-wrap;
+  color: #b7c0d3;
+  margin: 0;
+}
+
+
+#showInstructions {
+  border-color: rgba(180, 108, 255, 0.45);
+}
+
+#showInstructions:hover {
+  background: #312046;
+}
+
+code {
+  font: 12px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #f0e6ff;
+}
+
+
+#showRunMetrics {
+  border-color: rgba(77, 176, 255, 0.38);
+}
+
+#showRunMetrics:hover {
+  background: #203247;
+}
