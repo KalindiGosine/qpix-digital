@@ -15,13 +15,13 @@ On GitHub: `Settings -> Pages -> Build and deployment -> Deploy from a branch ->
 
 ## Default scenario
 
-The default playback is `./playback/live_event_3x5_chip14.json`.
+The default playback is `./playback/live_event_3x5_chip14_source_3_2.json`.
 
 ## Example stable links
 
 - Default visualizer: `https://kalindigosine.github.io/qpix-digital/`
 - 3x5 bootstrap: `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_bootstrap_3x5.json`
-- 3x5 chip14: `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_event_3x5_chip14.json`
+- 3x5 chip14: `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_event_3x5_chip14_source_3_2.json`
 - 3x5 chip14 source (3,2): `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_event_3x5_chip14_source_3_2.json`
 - 15x15 chip131: `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_event_15x15_chip131.json`
 - 15x15 two-track source (0,0): `https://kalindigosine.github.io/qpix-digital/?playback=./playback/live_event_15x15_staggered_multichip.json`

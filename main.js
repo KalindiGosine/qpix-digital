@@ -852,7 +852,7 @@ function animate(ts) {
 
 applyHudWidth(loadHudWidth());
 resize();
-const playbackUrl = new URLSearchParams(window.location.search).get('playback') || './playback/live_event_3x5_chip14.json';
+const playbackUrl = new URLSearchParams(window.location.search).get('playback') || './playback/live_event_3x5_chip14_source_3_2.json';
 loadPlaybackFromUrl(playbackUrl).catch((error) => {
   scenarioEl.textContent = 'Scenario: failed to load sample';
   selectionEl.textContent = error.message;
