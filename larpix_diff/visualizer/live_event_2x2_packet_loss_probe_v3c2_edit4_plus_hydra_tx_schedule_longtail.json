@@ -1,0 +1,8439 @@
+{
+  "name": "2x2 RTL-Preconfigured Packet Loss Probe (v3c2 edit 4 + long tail)",
+  "rtl_version": "v3c2",
+  "rtl_edit_sequence": [
+    "edit1_hydra_rx_process_to_idle",
+    "edit2_comms_load_fifo_uses_rcvdpkt",
+    "edit3_comms_pkt_data_uses_readpkt",
+    "edit4_hydra_tx_get_fifo_no_parking"
+  ],
+  "rows": 2,
+  "cols": 2,
+  "source": {
+    "x": 0,
+    "y": 0
+  },
+  "chip_internal_debug": {
+    "csv_url": "./playback/v3c_version_edits/larpix_2x2_packet_loss_probe_v3c2_edit4_plus_hydra_tx_schedule_longtail/chip0_rx_debug.csv"
+  },
+  "total_ticks": 17050,
+  "initial_chips": [
+    {
+      "x": 0,
+      "y": 0,
+      "chip_id": 0,
+      "up_mask": 3,
+      "down_mask": 4
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "chip_id": 1,
+      "up_mask": 1,
+      "down_mask": 8
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "chip_id": 2,
+      "up_mask": 0,
+      "down_mask": 4
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "chip_id": 3,
+      "up_mask": 0,
+      "down_mask": 4
+    }
+  ],
+  "chip_updates": [],
+  "chip_events": [
+    {
+      "tick": 1000,
+      "event": "charge_injected",
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "channel_count": 64,
+      "total_charge": -3.199999999999997e-13
+    },
+    {
+      "tick": 1000,
+      "event": "charge_injected",
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "channels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "channel_count": 64,
+      "total_charge": -3.199999999999997e-13
+    }
+  ],
+  "data_packet_metrics": {
+    "generated_by_chip": [
+      {
+        "chip_id": 1,
+        "generated_count": 64,
+        "received_at_fpga_count": 64,
+        "total_arrivals_at_fpga_count": 64,
+        "delivery_ratio": 1.0
+      },
+      {
+        "chip_id": 2,
+        "generated_count": 64,
+        "received_at_fpga_count": 64,
+        "total_arrivals_at_fpga_count": 64,
+        "delivery_ratio": 1.0
+      }
+    ],
+    "total_generated": 128,
+    "total_received_at_fpga": 128,
+    "total_arrivals_at_fpga": 128,
+    "total_lost": 0,
+    "delivery_ratio": 1.0
+  },
+  "shared_fifo_updates": [
+    {
+      "tick": 0,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 1,
+      "y": 1,
+      "runtime_id": 3,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 1010,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 1010,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 1011,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 1011,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 1012,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 1012,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 1014,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 1014,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 1015,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 1015,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 1016,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 1016,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 1017,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 1017,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 1018,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 1018,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 1019,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 1019,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 1020,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 1020,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 1021,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 1021,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 1022,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 1022,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 1023,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 1023,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 1024,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 1024,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 1025,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 1025,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 1026,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 1026,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 1027,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 1027,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 1028,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 1028,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 1029,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 1029,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 1030,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 1030,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 1031,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 1031,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 1032,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 1032,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 1033,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 1033,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 1034,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 1034,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 1035,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 1035,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 1036,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 1036,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 1037,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 1037,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 1038,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 1038,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 1039,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 1039,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 1040,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 1040,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 1041,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 1041,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 1042,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 1042,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 1043,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 1043,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 1044,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 1044,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 1045,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 1045,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 1046,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 1046,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 1047,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 1047,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 1048,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 1048,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 1049,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 1049,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 1050,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 1050,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 1051,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 1051,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 1052,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 1052,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 1053,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 1053,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 1054,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 1054,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 1055,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 1055,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 1056,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 1056,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 1057,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 1057,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 1058,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 1058,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 1059,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 1059,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 1060,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 1060,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 1061,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 1061,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 1062,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 1062,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 1063,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 1063,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 1064,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 1064,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 1065,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 1065,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 1066,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 1066,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 1067,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 1067,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 1068,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 1068,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 1069,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 1069,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 1070,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 1070,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 1071,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 1071,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 1072,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 1072,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 1073,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 63
+    },
+    {
+      "tick": 1073,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 63
+    },
+    {
+      "tick": 1083,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 1083,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 1088,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 1153,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 1153,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 1158,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 1223,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 1223,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 1228,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 1293,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 1293,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 1298,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 1363,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 1363,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 1368,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 1433,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 1433,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 1438,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 1503,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 1503,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 1508,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 1573,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 1573,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 1578,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 1643,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 1643,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 1648,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 1713,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 1713,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 1718,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 1783,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 1783,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 1788,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 1853,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 1853,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 1858,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 1923,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 1923,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 1928,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 1993,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 1993,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 1998,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 2063,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 2063,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 2068,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 2133,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 2133,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 2138,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 2203,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 2203,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 2208,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 2273,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 2273,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 2278,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 2343,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 2343,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 2348,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 2413,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 2413,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 2418,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 2483,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 2483,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 2488,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 2553,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 2553,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 2558,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 2623,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 2623,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 2628,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 2693,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 2693,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 2698,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 2763,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 2763,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 2768,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 2833,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 2833,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 2838,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 2903,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 2903,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 2908,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 2973,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 2973,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 2978,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 3043,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 3043,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 3048,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 3113,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 3113,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 3118,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 3183,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 3183,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 3188,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 3253,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 3253,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 3258,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 3323,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 3323,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 3328,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 3393,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 3393,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 3398,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 3463,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 3463,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 3468,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 3533,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 3533,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 3538,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 3603,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 3603,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 3608,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 3673,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 3673,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 3678,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 3743,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 3743,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 3748,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 3813,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 3813,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 3818,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 3883,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 3883,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 3888,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 3953,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 3953,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 3958,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 4023,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 4023,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 4028,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 4093,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 4093,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 4098,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 4163,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 4163,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 4168,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 4233,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 4233,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 4238,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 4303,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 4303,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 4308,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 4373,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 4373,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 4378,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 4443,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 4443,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 4448,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 4513,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 4513,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 4518,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 4583,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 4583,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 4588,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 4653,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 4653,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 4658,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 4723,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 4723,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 4728,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 4793,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 4793,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 4798,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 4863,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 4863,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 4868,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 4933,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 4933,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 4938,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 5003,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 5003,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 5008,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 5073,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 5073,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 5078,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 5143,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 5143,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 5148,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 5213,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 5213,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 5218,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 5283,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 5283,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 5288,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 5353,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 5353,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 5358,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 5423,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 5423,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 5428,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 63
+    },
+    {
+      "tick": 5498,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 64
+    },
+    {
+      "tick": 5571,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 63
+    },
+    {
+      "tick": 5641,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 62
+    },
+    {
+      "tick": 5711,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 61
+    },
+    {
+      "tick": 5781,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 60
+    },
+    {
+      "tick": 5851,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 59
+    },
+    {
+      "tick": 5921,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 58
+    },
+    {
+      "tick": 5991,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 57
+    },
+    {
+      "tick": 6061,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 56
+    },
+    {
+      "tick": 6131,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 55
+    },
+    {
+      "tick": 6201,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 54
+    },
+    {
+      "tick": 6271,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 53
+    },
+    {
+      "tick": 6341,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 52
+    },
+    {
+      "tick": 6411,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 51
+    },
+    {
+      "tick": 6481,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 50
+    },
+    {
+      "tick": 6551,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 49
+    },
+    {
+      "tick": 6621,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 48
+    },
+    {
+      "tick": 6691,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 47
+    },
+    {
+      "tick": 6761,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 46
+    },
+    {
+      "tick": 6831,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 45
+    },
+    {
+      "tick": 6901,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 44
+    },
+    {
+      "tick": 6971,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 43
+    },
+    {
+      "tick": 7041,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 42
+    },
+    {
+      "tick": 7111,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 41
+    },
+    {
+      "tick": 7181,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 40
+    },
+    {
+      "tick": 7251,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 39
+    },
+    {
+      "tick": 7321,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 38
+    },
+    {
+      "tick": 7391,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 37
+    },
+    {
+      "tick": 7461,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 36
+    },
+    {
+      "tick": 7531,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 35
+    },
+    {
+      "tick": 7601,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 34
+    },
+    {
+      "tick": 7671,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 33
+    },
+    {
+      "tick": 7741,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 32
+    },
+    {
+      "tick": 7811,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 31
+    },
+    {
+      "tick": 7881,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 30
+    },
+    {
+      "tick": 7951,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 29
+    },
+    {
+      "tick": 8021,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 28
+    },
+    {
+      "tick": 8091,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 27
+    },
+    {
+      "tick": 8161,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 26
+    },
+    {
+      "tick": 8231,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 25
+    },
+    {
+      "tick": 8301,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 24
+    },
+    {
+      "tick": 8371,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 23
+    },
+    {
+      "tick": 8441,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 22
+    },
+    {
+      "tick": 8511,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 21
+    },
+    {
+      "tick": 8581,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 20
+    },
+    {
+      "tick": 8651,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 19
+    },
+    {
+      "tick": 8721,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 18
+    },
+    {
+      "tick": 8791,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 17
+    },
+    {
+      "tick": 8861,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 16
+    },
+    {
+      "tick": 8931,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 15
+    },
+    {
+      "tick": 9001,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 14
+    },
+    {
+      "tick": 9071,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 13
+    },
+    {
+      "tick": 9141,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 12
+    },
+    {
+      "tick": 9211,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 11
+    },
+    {
+      "tick": 9281,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 10
+    },
+    {
+      "tick": 9351,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 9
+    },
+    {
+      "tick": 9421,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 8
+    },
+    {
+      "tick": 9491,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 7
+    },
+    {
+      "tick": 9561,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 6
+    },
+    {
+      "tick": 9631,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 5
+    },
+    {
+      "tick": 9701,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 4
+    },
+    {
+      "tick": 9771,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 3
+    },
+    {
+      "tick": 9841,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 2
+    },
+    {
+      "tick": 9911,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 1
+    },
+    {
+      "tick": 9981,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 0
+    }
+  ],
+  "shared_fifo_max": 64,
+  "shared_fifo_capacity": 64,
+  "packet_spans": [
+    {
+      "type": "packet_move",
+      "start_tick": 1016,
+      "end_tick": 1082,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e80009",
+      "label": "Event data from chip 2 channel 0",
+      "tx_complete_tick": 1081,
+      "rx_complete_tick": 1081
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1016,
+      "end_tick": 1082,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e80005",
+      "label": "Event data from chip 1 channel 0",
+      "tx_complete_tick": 1081,
+      "rx_complete_tick": 1081
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1086,
+      "end_tick": 1152,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e80409",
+      "label": "Event data from chip 2 channel 1",
+      "tx_complete_tick": 1151,
+      "rx_complete_tick": 1151
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1086,
+      "end_tick": 1152,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e80405",
+      "label": "Event data from chip 1 channel 1",
+      "tx_complete_tick": 1151,
+      "rx_complete_tick": 1151
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e80809",
+      "label": "Event data from chip 2 channel 2",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e80805",
+      "label": "Event data from chip 1 channel 2",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1226,
+      "end_tick": 1292,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e80c09",
+      "label": "Event data from chip 2 channel 3",
+      "tx_complete_tick": 1291,
+      "rx_complete_tick": 1291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1226,
+      "end_tick": 1292,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e80c05",
+      "label": "Event data from chip 1 channel 3",
+      "tx_complete_tick": 1291,
+      "rx_complete_tick": 1291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1296,
+      "end_tick": 1362,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e81009",
+      "label": "Event data from chip 2 channel 4",
+      "tx_complete_tick": 1361,
+      "rx_complete_tick": 1361
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1296,
+      "end_tick": 1362,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e81005",
+      "label": "Event data from chip 1 channel 4",
+      "tx_complete_tick": 1361,
+      "rx_complete_tick": 1361
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e81409",
+      "label": "Event data from chip 2 channel 5",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e81405",
+      "label": "Event data from chip 1 channel 5",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1436,
+      "end_tick": 1502,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e81809",
+      "label": "Event data from chip 2 channel 6",
+      "tx_complete_tick": 1501,
+      "rx_complete_tick": 1501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1436,
+      "end_tick": 1502,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e81805",
+      "label": "Event data from chip 1 channel 6",
+      "tx_complete_tick": 1501,
+      "rx_complete_tick": 1501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1506,
+      "end_tick": 1572,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e81c09",
+      "label": "Event data from chip 2 channel 7",
+      "tx_complete_tick": 1571,
+      "rx_complete_tick": 1571
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1506,
+      "end_tick": 1572,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e81c05",
+      "label": "Event data from chip 1 channel 7",
+      "tx_complete_tick": 1571,
+      "rx_complete_tick": 1571
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e82009",
+      "label": "Event data from chip 2 channel 8",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e82005",
+      "label": "Event data from chip 1 channel 8",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1646,
+      "end_tick": 1712,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e82409",
+      "label": "Event data from chip 2 channel 9",
+      "tx_complete_tick": 1711,
+      "rx_complete_tick": 1711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1646,
+      "end_tick": 1712,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e82405",
+      "label": "Event data from chip 1 channel 9",
+      "tx_complete_tick": 1711,
+      "rx_complete_tick": 1711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1716,
+      "end_tick": 1782,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e82809",
+      "label": "Event data from chip 2 channel 10",
+      "tx_complete_tick": 1781,
+      "rx_complete_tick": 1781
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1716,
+      "end_tick": 1782,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e82805",
+      "label": "Event data from chip 1 channel 10",
+      "tx_complete_tick": 1781,
+      "rx_complete_tick": 1781
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e82c09",
+      "label": "Event data from chip 2 channel 11",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e82c05",
+      "label": "Event data from chip 1 channel 11",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1856,
+      "end_tick": 1922,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e83009",
+      "label": "Event data from chip 2 channel 12",
+      "tx_complete_tick": 1921,
+      "rx_complete_tick": 1921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1856,
+      "end_tick": 1922,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e83005",
+      "label": "Event data from chip 1 channel 12",
+      "tx_complete_tick": 1921,
+      "rx_complete_tick": 1921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1926,
+      "end_tick": 1992,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e83409",
+      "label": "Event data from chip 2 channel 13",
+      "tx_complete_tick": 1991,
+      "rx_complete_tick": 1991
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1926,
+      "end_tick": 1992,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e83405",
+      "label": "Event data from chip 1 channel 13",
+      "tx_complete_tick": 1991,
+      "rx_complete_tick": 1991
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1996,
+      "end_tick": 2062,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e83809",
+      "label": "Event data from chip 2 channel 14",
+      "tx_complete_tick": 2061,
+      "rx_complete_tick": 2061
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1996,
+      "end_tick": 2062,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e83805",
+      "label": "Event data from chip 1 channel 14",
+      "tx_complete_tick": 2061,
+      "rx_complete_tick": 2061
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2066,
+      "end_tick": 2132,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e83c09",
+      "label": "Event data from chip 2 channel 15",
+      "tx_complete_tick": 2131,
+      "rx_complete_tick": 2131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2066,
+      "end_tick": 2132,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e83c05",
+      "label": "Event data from chip 1 channel 15",
+      "tx_complete_tick": 2131,
+      "rx_complete_tick": 2131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2136,
+      "end_tick": 2202,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e84009",
+      "label": "Event data from chip 2 channel 16",
+      "tx_complete_tick": 2201,
+      "rx_complete_tick": 2201
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2136,
+      "end_tick": 2202,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e84005",
+      "label": "Event data from chip 1 channel 16",
+      "tx_complete_tick": 2201,
+      "rx_complete_tick": 2201
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2206,
+      "end_tick": 2272,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e84409",
+      "label": "Event data from chip 2 channel 17",
+      "tx_complete_tick": 2271,
+      "rx_complete_tick": 2271
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2206,
+      "end_tick": 2272,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e84405",
+      "label": "Event data from chip 1 channel 17",
+      "tx_complete_tick": 2271,
+      "rx_complete_tick": 2271
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2276,
+      "end_tick": 2342,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e84809",
+      "label": "Event data from chip 2 channel 18",
+      "tx_complete_tick": 2341,
+      "rx_complete_tick": 2341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2276,
+      "end_tick": 2342,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e84805",
+      "label": "Event data from chip 1 channel 18",
+      "tx_complete_tick": 2341,
+      "rx_complete_tick": 2341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2346,
+      "end_tick": 2412,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e84c09",
+      "label": "Event data from chip 2 channel 19",
+      "tx_complete_tick": 2411,
+      "rx_complete_tick": 2411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2346,
+      "end_tick": 2412,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e84c05",
+      "label": "Event data from chip 1 channel 19",
+      "tx_complete_tick": 2411,
+      "rx_complete_tick": 2411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2416,
+      "end_tick": 2482,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e85009",
+      "label": "Event data from chip 2 channel 20",
+      "tx_complete_tick": 2481,
+      "rx_complete_tick": 2481
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2416,
+      "end_tick": 2482,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e85005",
+      "label": "Event data from chip 1 channel 20",
+      "tx_complete_tick": 2481,
+      "rx_complete_tick": 2481
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2486,
+      "end_tick": 2552,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e85409",
+      "label": "Event data from chip 2 channel 21",
+      "tx_complete_tick": 2551,
+      "rx_complete_tick": 2551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2486,
+      "end_tick": 2552,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e85405",
+      "label": "Event data from chip 1 channel 21",
+      "tx_complete_tick": 2551,
+      "rx_complete_tick": 2551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2556,
+      "end_tick": 2622,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e85809",
+      "label": "Event data from chip 2 channel 22",
+      "tx_complete_tick": 2621,
+      "rx_complete_tick": 2621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2556,
+      "end_tick": 2622,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e85805",
+      "label": "Event data from chip 1 channel 22",
+      "tx_complete_tick": 2621,
+      "rx_complete_tick": 2621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2626,
+      "end_tick": 2692,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e85c09",
+      "label": "Event data from chip 2 channel 23",
+      "tx_complete_tick": 2691,
+      "rx_complete_tick": 2691
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2626,
+      "end_tick": 2692,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e85c05",
+      "label": "Event data from chip 1 channel 23",
+      "tx_complete_tick": 2691,
+      "rx_complete_tick": 2691
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2696,
+      "end_tick": 2762,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e86009",
+      "label": "Event data from chip 2 channel 24",
+      "tx_complete_tick": 2761,
+      "rx_complete_tick": 2761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2696,
+      "end_tick": 2762,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e86005",
+      "label": "Event data from chip 1 channel 24",
+      "tx_complete_tick": 2761,
+      "rx_complete_tick": 2761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2766,
+      "end_tick": 2832,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e86409",
+      "label": "Event data from chip 2 channel 25",
+      "tx_complete_tick": 2831,
+      "rx_complete_tick": 2831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2766,
+      "end_tick": 2832,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e86405",
+      "label": "Event data from chip 1 channel 25",
+      "tx_complete_tick": 2831,
+      "rx_complete_tick": 2831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2836,
+      "end_tick": 2902,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e86809",
+      "label": "Event data from chip 2 channel 26",
+      "tx_complete_tick": 2901,
+      "rx_complete_tick": 2901
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2836,
+      "end_tick": 2902,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e86805",
+      "label": "Event data from chip 1 channel 26",
+      "tx_complete_tick": 2901,
+      "rx_complete_tick": 2901
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2906,
+      "end_tick": 2972,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e86c09",
+      "label": "Event data from chip 2 channel 27",
+      "tx_complete_tick": 2971,
+      "rx_complete_tick": 2971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2906,
+      "end_tick": 2972,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e86c05",
+      "label": "Event data from chip 1 channel 27",
+      "tx_complete_tick": 2971,
+      "rx_complete_tick": 2971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2976,
+      "end_tick": 3042,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e87009",
+      "label": "Event data from chip 2 channel 28",
+      "tx_complete_tick": 3041,
+      "rx_complete_tick": 3041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 2976,
+      "end_tick": 3042,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e87005",
+      "label": "Event data from chip 1 channel 28",
+      "tx_complete_tick": 3041,
+      "rx_complete_tick": 3041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3046,
+      "end_tick": 3112,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e87409",
+      "label": "Event data from chip 2 channel 29",
+      "tx_complete_tick": 3111,
+      "rx_complete_tick": 3111
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3046,
+      "end_tick": 3112,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e87405",
+      "label": "Event data from chip 1 channel 29",
+      "tx_complete_tick": 3111,
+      "rx_complete_tick": 3111
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3116,
+      "end_tick": 3182,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e87809",
+      "label": "Event data from chip 2 channel 30",
+      "tx_complete_tick": 3181,
+      "rx_complete_tick": 3181
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3116,
+      "end_tick": 3182,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e87805",
+      "label": "Event data from chip 1 channel 30",
+      "tx_complete_tick": 3181,
+      "rx_complete_tick": 3181
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3186,
+      "end_tick": 3252,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e87c09",
+      "label": "Event data from chip 2 channel 31",
+      "tx_complete_tick": 3251,
+      "rx_complete_tick": 3251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3186,
+      "end_tick": 3252,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e87c05",
+      "label": "Event data from chip 1 channel 31",
+      "tx_complete_tick": 3251,
+      "rx_complete_tick": 3251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3256,
+      "end_tick": 3322,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e88009",
+      "label": "Event data from chip 2 channel 32",
+      "tx_complete_tick": 3321,
+      "rx_complete_tick": 3321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3256,
+      "end_tick": 3322,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e88005",
+      "label": "Event data from chip 1 channel 32",
+      "tx_complete_tick": 3321,
+      "rx_complete_tick": 3321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3326,
+      "end_tick": 3392,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e88409",
+      "label": "Event data from chip 2 channel 33",
+      "tx_complete_tick": 3391,
+      "rx_complete_tick": 3391
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3326,
+      "end_tick": 3392,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e88405",
+      "label": "Event data from chip 1 channel 33",
+      "tx_complete_tick": 3391,
+      "rx_complete_tick": 3391
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3396,
+      "end_tick": 3462,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e88809",
+      "label": "Event data from chip 2 channel 34",
+      "tx_complete_tick": 3461,
+      "rx_complete_tick": 3461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3396,
+      "end_tick": 3462,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e88805",
+      "label": "Event data from chip 1 channel 34",
+      "tx_complete_tick": 3461,
+      "rx_complete_tick": 3461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3466,
+      "end_tick": 3532,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e88c09",
+      "label": "Event data from chip 2 channel 35",
+      "tx_complete_tick": 3531,
+      "rx_complete_tick": 3531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3466,
+      "end_tick": 3532,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e88c05",
+      "label": "Event data from chip 1 channel 35",
+      "tx_complete_tick": 3531,
+      "rx_complete_tick": 3531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3536,
+      "end_tick": 3602,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e89009",
+      "label": "Event data from chip 2 channel 36",
+      "tx_complete_tick": 3601,
+      "rx_complete_tick": 3601
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3536,
+      "end_tick": 3602,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e89005",
+      "label": "Event data from chip 1 channel 36",
+      "tx_complete_tick": 3601,
+      "rx_complete_tick": 3601
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3606,
+      "end_tick": 3672,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e89409",
+      "label": "Event data from chip 2 channel 37",
+      "tx_complete_tick": 3671,
+      "rx_complete_tick": 3671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3606,
+      "end_tick": 3672,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e89405",
+      "label": "Event data from chip 1 channel 37",
+      "tx_complete_tick": 3671,
+      "rx_complete_tick": 3671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3676,
+      "end_tick": 3742,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e89809",
+      "label": "Event data from chip 2 channel 38",
+      "tx_complete_tick": 3741,
+      "rx_complete_tick": 3741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3676,
+      "end_tick": 3742,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e89805",
+      "label": "Event data from chip 1 channel 38",
+      "tx_complete_tick": 3741,
+      "rx_complete_tick": 3741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3746,
+      "end_tick": 3812,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e89c09",
+      "label": "Event data from chip 2 channel 39",
+      "tx_complete_tick": 3811,
+      "rx_complete_tick": 3811
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3746,
+      "end_tick": 3812,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e89c05",
+      "label": "Event data from chip 1 channel 39",
+      "tx_complete_tick": 3811,
+      "rx_complete_tick": 3811
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3816,
+      "end_tick": 3882,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8a009",
+      "label": "Event data from chip 2 channel 40",
+      "tx_complete_tick": 3881,
+      "rx_complete_tick": 3881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3816,
+      "end_tick": 3882,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8a005",
+      "label": "Event data from chip 1 channel 40",
+      "tx_complete_tick": 3881,
+      "rx_complete_tick": 3881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3886,
+      "end_tick": 3952,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8a409",
+      "label": "Event data from chip 2 channel 41",
+      "tx_complete_tick": 3951,
+      "rx_complete_tick": 3951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3886,
+      "end_tick": 3952,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8a405",
+      "label": "Event data from chip 1 channel 41",
+      "tx_complete_tick": 3951,
+      "rx_complete_tick": 3951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3956,
+      "end_tick": 4022,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8a809",
+      "label": "Event data from chip 2 channel 42",
+      "tx_complete_tick": 4021,
+      "rx_complete_tick": 4021
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 3956,
+      "end_tick": 4022,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8a805",
+      "label": "Event data from chip 1 channel 42",
+      "tx_complete_tick": 4021,
+      "rx_complete_tick": 4021
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4026,
+      "end_tick": 4092,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8ac09",
+      "label": "Event data from chip 2 channel 43",
+      "tx_complete_tick": 4091,
+      "rx_complete_tick": 4091
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4026,
+      "end_tick": 4092,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8ac05",
+      "label": "Event data from chip 1 channel 43",
+      "tx_complete_tick": 4091,
+      "rx_complete_tick": 4091
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4096,
+      "end_tick": 4162,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8b009",
+      "label": "Event data from chip 2 channel 44",
+      "tx_complete_tick": 4161,
+      "rx_complete_tick": 4161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4096,
+      "end_tick": 4162,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8b005",
+      "label": "Event data from chip 1 channel 44",
+      "tx_complete_tick": 4161,
+      "rx_complete_tick": 4161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4166,
+      "end_tick": 4232,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8b409",
+      "label": "Event data from chip 2 channel 45",
+      "tx_complete_tick": 4231,
+      "rx_complete_tick": 4231
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4166,
+      "end_tick": 4232,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8b405",
+      "label": "Event data from chip 1 channel 45",
+      "tx_complete_tick": 4231,
+      "rx_complete_tick": 4231
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4236,
+      "end_tick": 4302,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8b809",
+      "label": "Event data from chip 2 channel 46",
+      "tx_complete_tick": 4301,
+      "rx_complete_tick": 4301
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4236,
+      "end_tick": 4302,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8b805",
+      "label": "Event data from chip 1 channel 46",
+      "tx_complete_tick": 4301,
+      "rx_complete_tick": 4301
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4306,
+      "end_tick": 4372,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8bc09",
+      "label": "Event data from chip 2 channel 47",
+      "tx_complete_tick": 4371,
+      "rx_complete_tick": 4371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4306,
+      "end_tick": 4372,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8bc05",
+      "label": "Event data from chip 1 channel 47",
+      "tx_complete_tick": 4371,
+      "rx_complete_tick": 4371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4376,
+      "end_tick": 4442,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8c009",
+      "label": "Event data from chip 2 channel 48",
+      "tx_complete_tick": 4441,
+      "rx_complete_tick": 4441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4376,
+      "end_tick": 4442,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8c005",
+      "label": "Event data from chip 1 channel 48",
+      "tx_complete_tick": 4441,
+      "rx_complete_tick": 4441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4446,
+      "end_tick": 4512,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8c409",
+      "label": "Event data from chip 2 channel 49",
+      "tx_complete_tick": 4511,
+      "rx_complete_tick": 4511
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4446,
+      "end_tick": 4512,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8c405",
+      "label": "Event data from chip 1 channel 49",
+      "tx_complete_tick": 4511,
+      "rx_complete_tick": 4511
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4516,
+      "end_tick": 4582,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8c809",
+      "label": "Event data from chip 2 channel 50",
+      "tx_complete_tick": 4581,
+      "rx_complete_tick": 4581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4516,
+      "end_tick": 4582,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8c805",
+      "label": "Event data from chip 1 channel 50",
+      "tx_complete_tick": 4581,
+      "rx_complete_tick": 4581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4586,
+      "end_tick": 4652,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8cc09",
+      "label": "Event data from chip 2 channel 51",
+      "tx_complete_tick": 4651,
+      "rx_complete_tick": 4651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4586,
+      "end_tick": 4652,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8cc05",
+      "label": "Event data from chip 1 channel 51",
+      "tx_complete_tick": 4651,
+      "rx_complete_tick": 4651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4656,
+      "end_tick": 4722,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8d009",
+      "label": "Event data from chip 2 channel 52",
+      "tx_complete_tick": 4721,
+      "rx_complete_tick": 4721
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4656,
+      "end_tick": 4722,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8d005",
+      "label": "Event data from chip 1 channel 52",
+      "tx_complete_tick": 4721,
+      "rx_complete_tick": 4721
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4726,
+      "end_tick": 4792,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8d409",
+      "label": "Event data from chip 2 channel 53",
+      "tx_complete_tick": 4791,
+      "rx_complete_tick": 4791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4726,
+      "end_tick": 4792,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8d405",
+      "label": "Event data from chip 1 channel 53",
+      "tx_complete_tick": 4791,
+      "rx_complete_tick": 4791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4796,
+      "end_tick": 4862,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8d809",
+      "label": "Event data from chip 2 channel 54",
+      "tx_complete_tick": 4861,
+      "rx_complete_tick": 4861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4796,
+      "end_tick": 4862,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8d805",
+      "label": "Event data from chip 1 channel 54",
+      "tx_complete_tick": 4861,
+      "rx_complete_tick": 4861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4866,
+      "end_tick": 4932,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8dc09",
+      "label": "Event data from chip 2 channel 55",
+      "tx_complete_tick": 4931,
+      "rx_complete_tick": 4931
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4866,
+      "end_tick": 4932,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8dc05",
+      "label": "Event data from chip 1 channel 55",
+      "tx_complete_tick": 4931,
+      "rx_complete_tick": 4931
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4936,
+      "end_tick": 5002,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8e009",
+      "label": "Event data from chip 2 channel 56",
+      "tx_complete_tick": 5001,
+      "rx_complete_tick": 5001
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 4936,
+      "end_tick": 5002,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8e005",
+      "label": "Event data from chip 1 channel 56",
+      "tx_complete_tick": 5001,
+      "rx_complete_tick": 5001
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5006,
+      "end_tick": 5072,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8e409",
+      "label": "Event data from chip 2 channel 57",
+      "tx_complete_tick": 5071,
+      "rx_complete_tick": 5071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5006,
+      "end_tick": 5072,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8e405",
+      "label": "Event data from chip 1 channel 57",
+      "tx_complete_tick": 5071,
+      "rx_complete_tick": 5071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5076,
+      "end_tick": 5142,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8e809",
+      "label": "Event data from chip 2 channel 58",
+      "tx_complete_tick": 5141,
+      "rx_complete_tick": 5141
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5076,
+      "end_tick": 5142,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8e805",
+      "label": "Event data from chip 1 channel 58",
+      "tx_complete_tick": 5141,
+      "rx_complete_tick": 5141
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5146,
+      "end_tick": 5212,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8ec09",
+      "label": "Event data from chip 2 channel 59",
+      "tx_complete_tick": 5211,
+      "rx_complete_tick": 5211
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5146,
+      "end_tick": 5212,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8ec05",
+      "label": "Event data from chip 1 channel 59",
+      "tx_complete_tick": 5211,
+      "rx_complete_tick": 5211
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5216,
+      "end_tick": 5282,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8f009",
+      "label": "Event data from chip 2 channel 60",
+      "tx_complete_tick": 5281,
+      "rx_complete_tick": 5281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5216,
+      "end_tick": 5282,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8f005",
+      "label": "Event data from chip 1 channel 60",
+      "tx_complete_tick": 5281,
+      "rx_complete_tick": 5281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5286,
+      "end_tick": 5352,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8f409",
+      "label": "Event data from chip 2 channel 61",
+      "tx_complete_tick": 5351,
+      "rx_complete_tick": 5351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5286,
+      "end_tick": 5352,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8f405",
+      "label": "Event data from chip 1 channel 61",
+      "tx_complete_tick": 5351,
+      "rx_complete_tick": 5351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5356,
+      "end_tick": 5422,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8f809",
+      "label": "Event data from chip 2 channel 62",
+      "tx_complete_tick": 5421,
+      "rx_complete_tick": 5421
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5356,
+      "end_tick": 5422,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0x5058c80003e8f805",
+      "label": "Event data from chip 1 channel 62",
+      "tx_complete_tick": 5421,
+      "rx_complete_tick": 5421
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5426,
+      "end_tick": 5492,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8fc09",
+      "label": "Event data from chip 2 channel 63",
+      "tx_complete_tick": 5491,
+      "rx_complete_tick": 5491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 5426,
+      "end_tick": 5492,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "event_data",
+      "packet_word": "0xd058c80003e8fc05",
+      "label": "Event data from chip 1 channel 63",
+      "tx_complete_tick": 5491,
+      "rx_complete_tick": 5491
+    }
+  ],
+  "fpga_spans": [],
+  "fpga_events": [
+    {
+      "direction": "rx",
+      "start_tick": 1094,
+      "end_tick": 1160,
+      "complete_tick": 1159,
+      "packet_word": "0xd058c80003e80009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 0",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 0,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1164,
+      "end_tick": 1230,
+      "complete_tick": 1229,
+      "packet_word": "0xd058c80003e80005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 0",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 0,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1234,
+      "end_tick": 1300,
+      "complete_tick": 1299,
+      "packet_word": "0x5058c80003e80409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 1",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 1,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1304,
+      "end_tick": 1370,
+      "complete_tick": 1369,
+      "packet_word": "0x5058c80003e80405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 1",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 1,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1374,
+      "end_tick": 1440,
+      "complete_tick": 1439,
+      "packet_word": "0x5058c80003e80809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 2",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 2,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1444,
+      "end_tick": 1510,
+      "complete_tick": 1509,
+      "packet_word": "0x5058c80003e80805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 2",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 2,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1514,
+      "end_tick": 1580,
+      "complete_tick": 1579,
+      "packet_word": "0xd058c80003e80c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 3",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 3,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1584,
+      "end_tick": 1650,
+      "complete_tick": 1649,
+      "packet_word": "0xd058c80003e80c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 3",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 3,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1654,
+      "end_tick": 1720,
+      "complete_tick": 1719,
+      "packet_word": "0x5058c80003e81009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 4",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 4,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1724,
+      "end_tick": 1790,
+      "complete_tick": 1789,
+      "packet_word": "0x5058c80003e81005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 4",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 4,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1794,
+      "end_tick": 1860,
+      "complete_tick": 1859,
+      "packet_word": "0xd058c80003e81409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 5",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 5,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1864,
+      "end_tick": 1930,
+      "complete_tick": 1929,
+      "packet_word": "0xd058c80003e81405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 5",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 5,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1934,
+      "end_tick": 2000,
+      "complete_tick": 1999,
+      "packet_word": "0xd058c80003e81809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 6",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 6,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2004,
+      "end_tick": 2070,
+      "complete_tick": 2069,
+      "packet_word": "0xd058c80003e81805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 6",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 6,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2074,
+      "end_tick": 2140,
+      "complete_tick": 2139,
+      "packet_word": "0x5058c80003e81c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 7",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 7,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2144,
+      "end_tick": 2210,
+      "complete_tick": 2209,
+      "packet_word": "0x5058c80003e81c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 7",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 7,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2214,
+      "end_tick": 2280,
+      "complete_tick": 2279,
+      "packet_word": "0x5058c80003e82009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 8",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 8,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2284,
+      "end_tick": 2350,
+      "complete_tick": 2349,
+      "packet_word": "0x5058c80003e82005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 8",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 8,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2354,
+      "end_tick": 2420,
+      "complete_tick": 2419,
+      "packet_word": "0xd058c80003e82409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 9",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 9,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2424,
+      "end_tick": 2490,
+      "complete_tick": 2489,
+      "packet_word": "0xd058c80003e82405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 9",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 9,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2494,
+      "end_tick": 2560,
+      "complete_tick": 2559,
+      "packet_word": "0xd058c80003e82809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 10",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 10,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2564,
+      "end_tick": 2630,
+      "complete_tick": 2629,
+      "packet_word": "0xd058c80003e82805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 10",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 10,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2634,
+      "end_tick": 2700,
+      "complete_tick": 2699,
+      "packet_word": "0x5058c80003e82c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 11",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 11,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2704,
+      "end_tick": 2770,
+      "complete_tick": 2769,
+      "packet_word": "0x5058c80003e82c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 11",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 11,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2774,
+      "end_tick": 2840,
+      "complete_tick": 2839,
+      "packet_word": "0xd058c80003e83009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 12",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 12,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2844,
+      "end_tick": 2910,
+      "complete_tick": 2909,
+      "packet_word": "0xd058c80003e83005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 12",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 12,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2914,
+      "end_tick": 2980,
+      "complete_tick": 2979,
+      "packet_word": "0x5058c80003e83409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 13",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 13,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 2984,
+      "end_tick": 3050,
+      "complete_tick": 3049,
+      "packet_word": "0x5058c80003e83405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 13",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 13,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3054,
+      "end_tick": 3120,
+      "complete_tick": 3119,
+      "packet_word": "0x5058c80003e83809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 14",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 14,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3124,
+      "end_tick": 3190,
+      "complete_tick": 3189,
+      "packet_word": "0x5058c80003e83805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 14",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 14,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3194,
+      "end_tick": 3260,
+      "complete_tick": 3259,
+      "packet_word": "0xd058c80003e83c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 15",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 15,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3264,
+      "end_tick": 3330,
+      "complete_tick": 3329,
+      "packet_word": "0xd058c80003e83c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 15",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 15,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3334,
+      "end_tick": 3400,
+      "complete_tick": 3399,
+      "packet_word": "0x5058c80003e84009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 16",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 16,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3404,
+      "end_tick": 3470,
+      "complete_tick": 3469,
+      "packet_word": "0x5058c80003e84005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 16",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 16,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3474,
+      "end_tick": 3540,
+      "complete_tick": 3539,
+      "packet_word": "0xd058c80003e84409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 17",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 17,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3544,
+      "end_tick": 3610,
+      "complete_tick": 3609,
+      "packet_word": "0xd058c80003e84405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 17",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 17,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3614,
+      "end_tick": 3680,
+      "complete_tick": 3679,
+      "packet_word": "0xd058c80003e84809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 18",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 18,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3684,
+      "end_tick": 3750,
+      "complete_tick": 3749,
+      "packet_word": "0xd058c80003e84805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 18",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 18,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3754,
+      "end_tick": 3820,
+      "complete_tick": 3819,
+      "packet_word": "0x5058c80003e84c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 19",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 19,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3824,
+      "end_tick": 3890,
+      "complete_tick": 3889,
+      "packet_word": "0x5058c80003e84c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 19",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 19,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3894,
+      "end_tick": 3960,
+      "complete_tick": 3959,
+      "packet_word": "0xd058c80003e85009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 20",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 20,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 3964,
+      "end_tick": 4030,
+      "complete_tick": 4029,
+      "packet_word": "0xd058c80003e85005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 20",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 20,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4034,
+      "end_tick": 4100,
+      "complete_tick": 4099,
+      "packet_word": "0x5058c80003e85409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 21",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 21,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4104,
+      "end_tick": 4170,
+      "complete_tick": 4169,
+      "packet_word": "0x5058c80003e85405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 21",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 21,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4174,
+      "end_tick": 4240,
+      "complete_tick": 4239,
+      "packet_word": "0x5058c80003e85809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 22",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 22,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4244,
+      "end_tick": 4310,
+      "complete_tick": 4309,
+      "packet_word": "0x5058c80003e85805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 22",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 22,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4314,
+      "end_tick": 4380,
+      "complete_tick": 4379,
+      "packet_word": "0xd058c80003e85c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 23",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 23,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4384,
+      "end_tick": 4450,
+      "complete_tick": 4449,
+      "packet_word": "0xd058c80003e85c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 23",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 23,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4454,
+      "end_tick": 4520,
+      "complete_tick": 4519,
+      "packet_word": "0xd058c80003e86009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 24",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 24,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4524,
+      "end_tick": 4590,
+      "complete_tick": 4589,
+      "packet_word": "0xd058c80003e86005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 24",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 24,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4594,
+      "end_tick": 4660,
+      "complete_tick": 4659,
+      "packet_word": "0x5058c80003e86409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 25",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 25,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4664,
+      "end_tick": 4730,
+      "complete_tick": 4729,
+      "packet_word": "0x5058c80003e86405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 25",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 25,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4734,
+      "end_tick": 4800,
+      "complete_tick": 4799,
+      "packet_word": "0x5058c80003e86809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 26",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 26,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4804,
+      "end_tick": 4870,
+      "complete_tick": 4869,
+      "packet_word": "0x5058c80003e86805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 26",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 26,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4874,
+      "end_tick": 4940,
+      "complete_tick": 4939,
+      "packet_word": "0xd058c80003e86c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 27",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 27,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 4944,
+      "end_tick": 5010,
+      "complete_tick": 5009,
+      "packet_word": "0xd058c80003e86c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 27",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 27,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5014,
+      "end_tick": 5080,
+      "complete_tick": 5079,
+      "packet_word": "0x5058c80003e87009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 28",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 28,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5084,
+      "end_tick": 5150,
+      "complete_tick": 5149,
+      "packet_word": "0x5058c80003e87005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 28",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 28,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5154,
+      "end_tick": 5220,
+      "complete_tick": 5219,
+      "packet_word": "0xd058c80003e87409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 29",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 29,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5224,
+      "end_tick": 5290,
+      "complete_tick": 5289,
+      "packet_word": "0xd058c80003e87405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 29",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 29,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5294,
+      "end_tick": 5360,
+      "complete_tick": 5359,
+      "packet_word": "0xd058c80003e87809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 30",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 30,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5364,
+      "end_tick": 5430,
+      "complete_tick": 5429,
+      "packet_word": "0xd058c80003e87805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 30",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 30,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5434,
+      "end_tick": 5500,
+      "complete_tick": 5499,
+      "packet_word": "0x5058c80003e87c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 31",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 31,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5504,
+      "end_tick": 5570,
+      "complete_tick": 5569,
+      "packet_word": "0x5058c80003e87c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 31",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 31,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5574,
+      "end_tick": 5640,
+      "complete_tick": 5639,
+      "packet_word": "0x5058c80003e88009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 32",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 32,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5644,
+      "end_tick": 5710,
+      "complete_tick": 5709,
+      "packet_word": "0x5058c80003e88005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 32",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 32,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5714,
+      "end_tick": 5780,
+      "complete_tick": 5779,
+      "packet_word": "0xd058c80003e88409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 33",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 33,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5784,
+      "end_tick": 5850,
+      "complete_tick": 5849,
+      "packet_word": "0xd058c80003e88405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 33",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 33,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5854,
+      "end_tick": 5920,
+      "complete_tick": 5919,
+      "packet_word": "0xd058c80003e88809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 34",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 34,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5924,
+      "end_tick": 5990,
+      "complete_tick": 5989,
+      "packet_word": "0xd058c80003e88805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 34",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 34,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 5994,
+      "end_tick": 6060,
+      "complete_tick": 6059,
+      "packet_word": "0x5058c80003e88c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 35",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 35,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6064,
+      "end_tick": 6130,
+      "complete_tick": 6129,
+      "packet_word": "0x5058c80003e88c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 35",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 35,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6134,
+      "end_tick": 6200,
+      "complete_tick": 6199,
+      "packet_word": "0xd058c80003e89009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 36",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 36,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6204,
+      "end_tick": 6270,
+      "complete_tick": 6269,
+      "packet_word": "0xd058c80003e89005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 36",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 36,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6274,
+      "end_tick": 6340,
+      "complete_tick": 6339,
+      "packet_word": "0x5058c80003e89409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 37",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 37,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6344,
+      "end_tick": 6410,
+      "complete_tick": 6409,
+      "packet_word": "0x5058c80003e89405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 37",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 37,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6414,
+      "end_tick": 6480,
+      "complete_tick": 6479,
+      "packet_word": "0x5058c80003e89809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 38",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 38,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6484,
+      "end_tick": 6550,
+      "complete_tick": 6549,
+      "packet_word": "0x5058c80003e89805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 38",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 38,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6554,
+      "end_tick": 6620,
+      "complete_tick": 6619,
+      "packet_word": "0xd058c80003e89c09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 39",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 39,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6624,
+      "end_tick": 6690,
+      "complete_tick": 6689,
+      "packet_word": "0xd058c80003e89c05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 39",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 39,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6694,
+      "end_tick": 6760,
+      "complete_tick": 6759,
+      "packet_word": "0xd058c80003e8a009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 40",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 40,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6764,
+      "end_tick": 6830,
+      "complete_tick": 6829,
+      "packet_word": "0xd058c80003e8a005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 40",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 40,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6834,
+      "end_tick": 6900,
+      "complete_tick": 6899,
+      "packet_word": "0x5058c80003e8a409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 41",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 41,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6904,
+      "end_tick": 6970,
+      "complete_tick": 6969,
+      "packet_word": "0x5058c80003e8a405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 41",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 41,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 6974,
+      "end_tick": 7040,
+      "complete_tick": 7039,
+      "packet_word": "0x5058c80003e8a809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 42",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 42,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7044,
+      "end_tick": 7110,
+      "complete_tick": 7109,
+      "packet_word": "0x5058c80003e8a805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 42",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 42,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7114,
+      "end_tick": 7180,
+      "complete_tick": 7179,
+      "packet_word": "0xd058c80003e8ac09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 43",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 43,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7184,
+      "end_tick": 7250,
+      "complete_tick": 7249,
+      "packet_word": "0xd058c80003e8ac05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 43",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 43,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7254,
+      "end_tick": 7320,
+      "complete_tick": 7319,
+      "packet_word": "0x5058c80003e8b009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 44",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 44,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7324,
+      "end_tick": 7390,
+      "complete_tick": 7389,
+      "packet_word": "0x5058c80003e8b005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 44",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 44,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7394,
+      "end_tick": 7460,
+      "complete_tick": 7459,
+      "packet_word": "0xd058c80003e8b409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 45",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 45,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7464,
+      "end_tick": 7530,
+      "complete_tick": 7529,
+      "packet_word": "0xd058c80003e8b405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 45",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 45,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7534,
+      "end_tick": 7600,
+      "complete_tick": 7599,
+      "packet_word": "0xd058c80003e8b809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 46",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 46,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7604,
+      "end_tick": 7670,
+      "complete_tick": 7669,
+      "packet_word": "0xd058c80003e8b805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 46",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 46,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7674,
+      "end_tick": 7740,
+      "complete_tick": 7739,
+      "packet_word": "0x5058c80003e8bc09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 47",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 47,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7744,
+      "end_tick": 7810,
+      "complete_tick": 7809,
+      "packet_word": "0x5058c80003e8bc05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 47",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 47,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7814,
+      "end_tick": 7880,
+      "complete_tick": 7879,
+      "packet_word": "0xd058c80003e8c009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 48",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 48,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7884,
+      "end_tick": 7950,
+      "complete_tick": 7949,
+      "packet_word": "0xd058c80003e8c005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 48",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 48,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 7954,
+      "end_tick": 8020,
+      "complete_tick": 8019,
+      "packet_word": "0x5058c80003e8c409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 49",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 49,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8024,
+      "end_tick": 8090,
+      "complete_tick": 8089,
+      "packet_word": "0x5058c80003e8c405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 49",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 49,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8094,
+      "end_tick": 8160,
+      "complete_tick": 8159,
+      "packet_word": "0x5058c80003e8c809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 50",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 50,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8164,
+      "end_tick": 8230,
+      "complete_tick": 8229,
+      "packet_word": "0x5058c80003e8c805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 50",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 50,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8234,
+      "end_tick": 8300,
+      "complete_tick": 8299,
+      "packet_word": "0xd058c80003e8cc09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 51",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 51,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8304,
+      "end_tick": 8370,
+      "complete_tick": 8369,
+      "packet_word": "0xd058c80003e8cc05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 51",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 51,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8374,
+      "end_tick": 8440,
+      "complete_tick": 8439,
+      "packet_word": "0x5058c80003e8d009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 52",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 52,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8444,
+      "end_tick": 8510,
+      "complete_tick": 8509,
+      "packet_word": "0x5058c80003e8d005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 52",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 52,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8514,
+      "end_tick": 8580,
+      "complete_tick": 8579,
+      "packet_word": "0xd058c80003e8d409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 53",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 53,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8584,
+      "end_tick": 8650,
+      "complete_tick": 8649,
+      "packet_word": "0xd058c80003e8d405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 53",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 53,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8654,
+      "end_tick": 8720,
+      "complete_tick": 8719,
+      "packet_word": "0xd058c80003e8d809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 54",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 54,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8724,
+      "end_tick": 8790,
+      "complete_tick": 8789,
+      "packet_word": "0xd058c80003e8d805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 54",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 54,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8794,
+      "end_tick": 8860,
+      "complete_tick": 8859,
+      "packet_word": "0x5058c80003e8dc09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 55",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 55,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8864,
+      "end_tick": 8930,
+      "complete_tick": 8929,
+      "packet_word": "0x5058c80003e8dc05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 55",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 55,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 8934,
+      "end_tick": 9000,
+      "complete_tick": 8999,
+      "packet_word": "0x5058c80003e8e009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 56",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 56,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9004,
+      "end_tick": 9070,
+      "complete_tick": 9069,
+      "packet_word": "0x5058c80003e8e005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 56",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 56,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9074,
+      "end_tick": 9140,
+      "complete_tick": 9139,
+      "packet_word": "0xd058c80003e8e409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 57",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 57,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9144,
+      "end_tick": 9210,
+      "complete_tick": 9209,
+      "packet_word": "0xd058c80003e8e405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 57",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 57,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9214,
+      "end_tick": 9280,
+      "complete_tick": 9279,
+      "packet_word": "0xd058c80003e8e809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 58",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 58,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9284,
+      "end_tick": 9350,
+      "complete_tick": 9349,
+      "packet_word": "0xd058c80003e8e805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 58",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 58,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9354,
+      "end_tick": 9420,
+      "complete_tick": 9419,
+      "packet_word": "0x5058c80003e8ec09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 59",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 59,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9424,
+      "end_tick": 9490,
+      "complete_tick": 9489,
+      "packet_word": "0x5058c80003e8ec05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 59",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 59,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9494,
+      "end_tick": 9560,
+      "complete_tick": 9559,
+      "packet_word": "0xd058c80003e8f009",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 60",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 60,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9564,
+      "end_tick": 9630,
+      "complete_tick": 9629,
+      "packet_word": "0xd058c80003e8f005",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 60",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 60,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9634,
+      "end_tick": 9700,
+      "complete_tick": 9699,
+      "packet_word": "0x5058c80003e8f409",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 61",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 61,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9704,
+      "end_tick": 9770,
+      "complete_tick": 9769,
+      "packet_word": "0x5058c80003e8f405",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 61",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 61,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9774,
+      "end_tick": 9840,
+      "complete_tick": 9839,
+      "packet_word": "0x5058c80003e8f809",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 62",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 62,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9844,
+      "end_tick": 9910,
+      "complete_tick": 9909,
+      "packet_word": "0x5058c80003e8f805",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 62",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 62,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9914,
+      "end_tick": 9980,
+      "complete_tick": 9979,
+      "packet_word": "0xd058c80003e8fc09",
+      "packet_type": "event_data",
+      "label": "Event data from chip 2 channel 63",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 2,
+          "channel_id": 63,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 9984,
+      "end_tick": 10050,
+      "complete_tick": 10049,
+      "packet_word": "0xd058c80003e8fc05",
+      "packet_type": "event_data",
+      "label": "Event data from chip 1 channel 63",
+      "decode": {
+        "kind": "data",
+        "decoded": {
+          "packet_type": 1,
+          "chip_id": 1,
+          "channel_id": 63,
+          "timestamp": 134218728,
+          "cds_reset": 0,
+          "cds_flag": 0,
+          "adc": 355,
+          "trigger_type": 0,
+          "status_nibble": 4,
+          "downstream": 1
+        },
+        "odd_parity_ok": true
+      }
+    }
+  ],
+  "run_summary": {
+    "ticks": 17000,
+    "runtime_sec": 13.660802560858428,
+    "ticks_per_sec": 1244.4364029320793,
+    "cpu_cores_used": 2,
+    "cpu_peak_concurrent_cores": 2,
+    "cpu_core_ids_used": [
+      5,
+      13
+    ],
+    "cpu_cores_available": 72
+  }
+}
