@@ -8,7 +8,7 @@
     "y": 0
   },
   "chip_internal_debug": {
-    "csv_url": "./playback/v3c_version_edits/larpix_2x2_packet_loss_probe_v3c/chip0_rx_debug.csv"
+    "csv_url": "./larpix_diff/visualizer/larpix_2x2_packet_loss_probe_v3c/chip0_rx_debug.csv"
   },
   "total_ticks": 7050,
   "initial_chips": [
