@@ -65,6 +65,23 @@ body.hud-resizing #hudResizeHandle {
   margin: 8px 0;
 }
 
+.view-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+.view-tab {
+  flex: 1 1 0;
+  border-color: rgba(118, 132, 167, 0.35);
+}
+
+.view-tab.active {
+  background: #2a3950;
+  border-color: rgba(77, 176, 255, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(77, 176, 255, 0.2);
+}
+
 button {
   background: #1e2633;
   color: #e8edf8;

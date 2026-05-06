@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LArPix Event Playback Visualizer</title>
-  <link rel="stylesheet" href="style.css?v=run-metrics-1">
+  <link rel="stylesheet" href="style.css?v=chip-view-4">
 </head>
 <body>
   <aside id="hud">
     <h1>LArPix Event Playback</h1>
     <div id="scenario">Scenario: loading...</div>
+    <div id="rtlVersion">RTL: loading...</div>
     <div id="status">Tick: 0 / 0</div>
     <div class="sep"></div>
     <div class="controls">
@@ -19,6 +20,10 @@
       <button id="reset">Reset</button>
       <button id="showInstructions">Instructions</button>
       <button id="showRunMetrics">Run Metrics</button>
+    </div>
+    <div class="view-tabs">
+      <button id="showNetworkView" class="view-tab active">Network View</button>
+      <button id="showChipView" class="view-tab">Chip 0 View</button>
     </div>
     <label class="row">
       <span>Speed</span>
@@ -127,6 +132,6 @@
     <div id="runMetricsPopupBody" class="floating-panel-body"></div>
   </div>
   <canvas id="board"></canvas>
-  <script type="module" src="main.js?v=run-metrics-3"></script>
+  <script type="module" src="main.js?v=chip-view-4"></script>
 </body>
 </html>
