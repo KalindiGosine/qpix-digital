@@ -914,7 +914,11 @@ function drawChipInternalView(width, height) {
   );
 
   const txActive = [3, 4, 5].includes(Number(row.hydra_state)) || [3, 4, 5].includes(Number(row.hydra_next_state));
-  const outboundPacket = (tickData().packetEvents || []).find((event) => Array.isArray(event.src) && monitorChip && event.src[0] === monitorChip.x && event.src[1] === monitorChip.y);
+  const currentTick = tickData();
+  const outboundPacket = (currentTick.packetEvents || []).find((event) => Array.isArray(event.src) && monitorChip && event.src[0] === monitorChip.x && event.src[1] === monitorChip.y)
+    || (monitorChip && playback?.source && monitorChip.x === playback.source.x && monitorChip.y === playback.source.y
+      ? (currentTick.fpgaRxEvents || [])[0]
+      : null);
 
   drawComponentBox(
     fifoRect,
