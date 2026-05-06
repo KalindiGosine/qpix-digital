@@ -1,5 +1,17 @@
 # Packet Loss : `v3c` to `v3c2`
 
+## Visualizer Playback URLs
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit1_rx_process_to_idle.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit2_hydra_idle_plus_comms_rcvdpkt.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit3_plus_pktdata_readpkt.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit4_plus_hydra_tx_schedule_longtail.json>
+
 ## Summary
 
 This note records the incremental `2x2` packet-loss investigation performed on the `v3c` RTL and the then modified `v3c2` tree. The goal was to re-apply the four fixes that had previously separated `v3b` from `v3b2`, but to do so one change at a time and preserve a playback/debug snapshot after each edit.
@@ -79,6 +91,8 @@ Observed result:
   - unique packets from chip `2`: `32`
   - total arrivals from chip `2`: `64`
 
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c.json>
+
 ## `v3c2` Edit 1: `hydra_ctrl.sv` `RX_PROCESS -> IDLE`
 
 This follow-up experiment keeps the `v3c` RTL as the baseline and introduces only the first Hydra RX-state change in a separate `v3c2` tree. The goal is to measure the effect of that one change by itself before applying the later `v2` fixes.
@@ -108,6 +122,11 @@ The only behavioral change between `v3c` and `v3c2` is in:
                 else                        Next = IDLE;
             end
 ```
+
+### Playback Links: 
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c.json>
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit1_rx_process_to_idle.json>
 
 This is the same first fix that was introduced in the successful `v3b2` path: once `comms_ctrl` is no longer busy, Hydra must return to `IDLE` before selecting and unloading another RX lane. That forces `rx_data` to refresh through the `IDLE` state instead of letting Hydra jump directly back into `RX_CAPTURE`.
 
@@ -181,6 +200,13 @@ Comparison with Edit 1:
 - no network-level change yet
 - this fix improves internal transaction consistency but is not sufficient by itself
 
+### Playback Links: 
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit1_rx_process_to_idle.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit2_hydra_idle_plus_comms_rcvdpkt.json>
+
+
 ## `v3c2` Edit 3: `pkt_data` Uses `read_pkt`
 
 The third isolated `v3c2` change keeps the first two fixes in place and then removes the final live-bus bypass in `comms_ctrl`. Instead of letting the FIFO write path choose between corrected `read_pkt` and live `rx_data`, it now always sends the packet assembled in `read_pkt`.
@@ -204,7 +230,7 @@ This edit targets the specific mismatch where `read_pkt` had already been correc
 In other words:
 
 - `read_pkt` could describe the right packet transaction
-- but `pkt_data` could still inject the wrong lane's packet into the Hydra FIFO
+- but `pkt_data` could still inject the wrong lanes packet into the Hydra FIFO
 
 You see this behavior in the Edit2 visualizer at ticks 1086-1087 where although in Comms Ctrl, `read_pkt` is the north packet, the fifo memory first position is filled with the east packet. This is because the v3c RTL defines that FIFO load is again based on a stale `rx_data` state. This bug seems to have been addressed on 5/5/26 in commit 12eee5b to the v3c repo. This test was done on RTL pulled on 04/29/2026. 
 
@@ -234,6 +260,12 @@ Comparison with Edit 2:
 - total forwarded traffic is still `64`
 - but the winner-take-all symptom is gone
 - both sources are now represented at the FPGA
+
+### Playback Links: 
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit2_hydra_idle_plus_comms_rcvdpkt.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit3_plus_pktdata_readpkt.json>
 
 ## `v3c2` Edit 4: Hydra TX Scheduling Fix
 
@@ -309,5 +341,12 @@ Relative to Edit 3, Edit 4 improves both total forwarding throughput and the FPG
 - Edit 4:
   - chip `0` TX count: `128`
   - FPGA sees chip `1`: `64`, chip `2`: `64`
+
+### Playback Links: 
+
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit3_plus_pktdata_readpkt.json>
+
+<https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit4_plus_hydra_tx_schedule_longtail.json>
 
 So Edit 4 is the first change in the `v3c2` sequence that restores full `128`-packet forwarding in the `2x2` case, once the run is given enough drain time. This confirms that Hydra TX self-blocking was the real remaining limiter after the first three fixes.
