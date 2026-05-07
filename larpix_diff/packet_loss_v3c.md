@@ -12,6 +12,14 @@
 
 <https://kalindigosine.github.io/qpix-digital/index.html?playback=./larpix_diff/visualizer/live_event_2x2_packet_loss_probe_v3c2_edit4_plus_hydra_tx_schedule_longtail.json>
 
+## Patches 
+
+Between the v3c RTL pulled at commit 89b735b on 04/29/26 found here [LArPix_v3c_Patch](../patches/v3c_import_to_v3c2.patch)
+
+Between the Verilator compatible v3c RTL and the modified v3c2 RTL with the 4 edits outlines below (packet loss specific changes) found here [LArPix_PacketLoss_Patch](../patches/v3c_to_v3c2_packetloss_only.patch)
+
+
+
 ## Summary
 
 This note records the incremental `2x2` packet-loss investigation performed on the `v3c` RTL and the then modified `v3c2` tree. The goal was to re-apply the four fixes that had previously separated `v3b` from `v3b2`, but to do so one change at a time and preserve a playback/debug snapshot after each edit.

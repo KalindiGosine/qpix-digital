@@ -1,0 +1,188 @@
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/comms_ctrl.sv larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/comms_ctrl.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv	2026-05-06 10:50:51.668968000 -0700
+@@ -138,8 +138,8 @@
+ state_e State, Next;
+ 
+     // calculate parity
+-always_comb 
+-    pkt_data = (pkt_chip == chip_id) ? {~^read_pkt,read_pkt} : rx_data;
++always_comb
++    pkt_data = {~^read_pkt, read_pkt};
+ 
+ //  State register
+ always_ff @(posedge clk or negedge reset_n)
+@@ -235,10 +235,10 @@
+                 ////read_pkt[1:0] <= CONFIG_READ_OP; // set pkt id
+                 //// Build 63-bit packet in one assignment, 
+                 //// to avoid synthesis warning: Variable/signal is assigned by multiple non-blocking assignments
+-                if ((rx_data[9:2] != chip_id) || 
+-                        (rx_data[9:2] == GLOBAL_ID) ||
+-                        pkt_type == DATA_OP) begin
+-                        read_pkt <= rx_data;
++                if ((rcvd_pkt[9:2] != chip_id) || 
++                        (rcvd_pkt[9:2] == GLOBAL_ID) ||
++                        rcvd_pkt[1:0] == DATA_OP) begin
++                        read_pkt <= rcvd_pkt[WIDTH-2:0];
+                 end else begin
+                     read_pkt <= {
+                         1'b1,  // bit 62 = downstream flag
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/config_regfile_assign.sv larpix_network_sim/larpix_v3c2/src/config_regfile_assign.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/config_regfile_assign.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/config_regfile_assign.sv	2026-05-06 10:33:22.176150000 -0700
+@@ -5,7 +5,9 @@
+ ///////////////////////////////////////////////////////////////////
+ 
+         for (int i = 0; i < 64; i++) config_bits[PIXEL_TRIM + i] <= 8'h10;
+-        config_bits[GLOBAL_THRESH] <= 8'hFF;
++        // With default PIXEL_TRIM=8'h10 and the analog-model threshold formula,
++        // GLOBAL_THRESH=8'h0F yields an analog threshold of about 0.60047 V.
++        config_bits[GLOBAL_THRESH] <= 8'h0F;
+         config_bits[CSA_CTRL] <= 8'h04;
+         for (int i = 0; i < 8; i++) config_bits[CSA_ENABLE + i] <= 8'h00;
+         config_bits[IBIAS_TDAC] <= 8'h08;
+@@ -76,4 +78,3 @@
+         config_bits[TRX14] <= 8'h00;
+         config_bits[TRX15] <= 8'h55;
+         config_bits[TRX16] <= 8'h55;
+-
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/external_interface.sv larpix_network_sim/larpix_v3c2/src/external_interface.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/external_interface.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/external_interface.sv	2026-05-06 10:33:22.190142000 -0700
+@@ -43,6 +43,9 @@
+ logic [WIDTH-1:0] rx_data;
+ logic [WIDTH-1:0] pkt_data;
+ logic pkt_valid;
++logic rx_data_flag;
++logic ready_for_pkt;
++logic comms_busy;
+ logic [7:0] regmap_write_data;
+ logic [7:0] regmap_read_data;
+ logic [7:0] regmap_address;
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/gate_negedge_clk.sv larpix_network_sim/larpix_v3c2/src/gate_negedge_clk.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/gate_negedge_clk.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/gate_negedge_clk.sv	2026-05-06 10:33:22.196142000 -0700
+@@ -11,6 +11,18 @@
+     input logic EN,                // clock-gating: enable clock (active high)
+     input logic CLK);             // negedge clock
+ 
++`ifdef VERILATOR
++logic en_latched;
++
++// Functional model of a negative-edge clock gate:
++// capture EN only while CLK is high, then gate the low phase.
++always_latch begin
++    if (CLK)
++        en_latched = EN;
++end
++
++assign ENCLK = CLK | ~en_latched;
++`else
+ logic EN_dly;
+ always EN_dly = #0.5 EN; // avoid (false) hold violations
+ 
+@@ -21,7 +33,7 @@
+     .E(EN_dly),
+     .TE(1'b0),
+     .CPN(CLK));
++`endif
+ 
+ 
+ endmodule
+-
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/gate_posedge_clk.sv larpix_network_sim/larpix_v3c2/src/gate_posedge_clk.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/gate_posedge_clk.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/gate_posedge_clk.sv	2026-05-06 10:33:22.199141000 -0700
+@@ -12,6 +12,18 @@
+     input logic EN,               // clock-gating: enable clock (active high)
+     input logic CLK);             // posedge clock
+ 
++`ifdef VERILATOR
++logic en_latched;
++
++// Functional model of a positive-edge clock gate:
++// capture EN only while CLK is low, then gate the high phase.
++always_latch begin
++    if (!CLK)
++        en_latched = EN;
++end
++
++assign ENCLK = CLK & en_latched;
++`else
+ logic EN_dly;
+ always @(EN) EN_dly = #1.5 EN; //DG: required to suppress timing violations
+ //this is clearly acceptable only if the EN is generated by the same clock we are gating
+@@ -22,6 +34,6 @@
+     .TE(1'b0),
+     .E(EN_dly),
+     .CP(CLK));
++`endif
+ 
+ endmodule
+-
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv	2026-05-06 10:53:46.089935000 -0700
+@@ -57,11 +57,13 @@
+ logic [3:0] sel_onehot;     
+ // one‑hot UART that will be served this cycle
+ logic fifo_half;
++logic fifo_full;
+ logic fifo_empty;
+ logic [WIDTH-1:0] fifo_rd_data;
+ logic [WIDTH-1:0] event_data_arb;
+ logic [FIFO_BITS:0] fifo_counter; // number of events in Hydra FIFO
+ logic fifo_read_n;      // active low read signal for hydra FIFO
++logic fifo_write_n;     // active low write signal for hydra FIFO
+ 
+     //  Include packet constants (opcodes, etc.)
+ `include "larpix_constants.sv"
+@@ -154,7 +156,8 @@
+     case (State)
+         IDLE: 
+             if (|uart_has_data)             Next = RX_CAPTURE;
+-            else if (!fifo_empty)            Next = TX_GET_FIFO;
++            else if (!fifo_empty && ((tx_busy & enable_piso_downstream) == '0))
++                                            Next = TX_GET_FIFO;
+         RX_CAPTURE:                         
+             if ( ((rx_data[9:2] != chip_id) || (rx_data[9:2] == GLOBAL_ID)) 
+                 && (rx_data[62] == 0) )     Next = TX_UPSTREAM; 
+@@ -167,11 +170,10 @@
+         RX_PROCESS:
+             begin
+                 if (comms_busy)             Next = RX_PROCESS;
+-                else if (|uart_has_data)    Next = RX_CAPTURE;
+-            else                            Next = IDLE;
++                else                        Next = IDLE;
+             end
+         TX_GET_FIFO: 
+-            if ((tx_busy & enable_piso_downstream) != '0) Next = TX_GET_FIFO; 
++            if ((tx_busy & enable_piso_downstream) != '0) Next = IDLE; 
+             else                            Next = TX_SEND;   
+         TX_SEND:                            Next = IDLE;
+     
+diff -ruN /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/larpix_constants.sv larpix_network_sim/larpix_v3c2/src/larpix_constants.sv
+--- /tmp/orig_larpix_v3c/larpix_network_sim/larpix_v3c/src/larpix_constants.sv	2026-04-29 20:26:57.000000000 -0700
++++ larpix_network_sim/larpix_v3c2/src/larpix_constants.sv	2026-05-06 10:33:22.205144000 -0700
+@@ -5,10 +5,10 @@
+ //
+ ///////////////////////////////////////////////////////////////////
+ 
+-`ifndef _larpix_constants_
+-`ifndef SYNTHESIS 
+-`define _larpix_constants_
+-`endif
++// NOTE:
++// This file is intended to be `include`d inside modules. It intentionally
++// does not use a global include guard so each including module gets its own
++// localparams during Verilator compilation.
+ 
+ // declare needed variables
+ localparam bit TRUE = 1;
+@@ -100,6 +100,3 @@
+ // SPI ops
+ localparam bit WRITE = 1;
+ localparam bit READ = 0;
+-
+-
+-`endif // _larpix_constants_

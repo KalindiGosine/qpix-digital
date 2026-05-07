@@ -1,0 +1,56 @@
+diff -ruN larpix_network_sim/larpix_v3c/src/comms_ctrl.sv larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv
+--- larpix_network_sim/larpix_v3c/src/comms_ctrl.sv	2026-04-29 20:26:56.175315000 -0700
++++ larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv	2026-05-06 10:50:51.668968000 -0700
+@@ -138,8 +138,8 @@
+ state_e State, Next;
+ 
+     // calculate parity
+-always_comb 
+-    pkt_data = (pkt_chip == chip_id) ? {~^read_pkt,read_pkt} : rx_data;
++always_comb
++    pkt_data = {~^read_pkt, read_pkt};
+ 
+ //  State register
+ always_ff @(posedge clk or negedge reset_n)
+@@ -235,10 +235,10 @@
+                 ////read_pkt[1:0] <= CONFIG_READ_OP; // set pkt id
+                 //// Build 63-bit packet in one assignment, 
+                 //// to avoid synthesis warning: Variable/signal is assigned by multiple non-blocking assignments
+-                if ((rx_data[9:2] != chip_id) || 
+-                        (rx_data[9:2] == GLOBAL_ID) ||
+-                        pkt_type == DATA_OP) begin
+-                        read_pkt <= rx_data;
++                if ((rcvd_pkt[9:2] != chip_id) || 
++                        (rcvd_pkt[9:2] == GLOBAL_ID) ||
++                        rcvd_pkt[1:0] == DATA_OP) begin
++                        read_pkt <= rcvd_pkt[WIDTH-2:0];
+                 end else begin
+                     read_pkt <= {
+                         1'b1,  // bit 62 = downstream flag
+diff -ruN larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv
+--- larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv	2026-04-30 13:54:07.626848000 -0700
++++ larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv	2026-05-06 10:53:46.089935000 -0700
+@@ -156,7 +156,8 @@
+     case (State)
+         IDLE: 
+             if (|uart_has_data)             Next = RX_CAPTURE;
+-            else if (!fifo_empty)            Next = TX_GET_FIFO;
++            else if (!fifo_empty && ((tx_busy & enable_piso_downstream) == '0))
++                                            Next = TX_GET_FIFO;
+         RX_CAPTURE:                         
+             if ( ((rx_data[9:2] != chip_id) || (rx_data[9:2] == GLOBAL_ID)) 
+                 && (rx_data[62] == 0) )     Next = TX_UPSTREAM; 
+@@ -169,11 +170,10 @@
+         RX_PROCESS:
+             begin
+                 if (comms_busy)             Next = RX_PROCESS;
+-                else if (|uart_has_data)    Next = RX_CAPTURE;
+-            else                            Next = IDLE;
++                else                        Next = IDLE;
+             end
+         TX_GET_FIFO: 
+-            if ((tx_busy & enable_piso_downstream) != '0) Next = TX_GET_FIFO; 
++            if ((tx_busy & enable_piso_downstream) != '0) Next = IDLE; 
+             else                            Next = TX_SEND;   
+         TX_SEND:                            Next = IDLE;
+     
