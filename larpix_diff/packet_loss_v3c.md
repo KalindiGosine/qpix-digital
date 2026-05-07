@@ -14,9 +14,9 @@
 
 ## Patches 
 
-Between the v3c RTL pulled at commit 89b735b on 04/29/26 found here [LArPix_v3c_Patch](../patches/v3c_import_to_v3c2.patch)
+Between the v3c RTL pulled at commit 89b735b on 04/29/26 found here [LArPix_v3c_Patch](patches/v3c_import_to_v3c2.patch)
 
-Between the Verilator compatible v3c RTL and the modified v3c2 RTL with the 4 edits outlines below (packet loss specific changes) found here [LArPix_PacketLoss_Patch](../patches/v3c_to_v3c2_packetloss_only.patch)
+Between the Verilator compatible v3c RTL and the modified v3c2 RTL with the 4 edits outlines below (packet loss specific changes) found here [LArPix_PacketLoss_Patch](patches/v3c_to_v3c2_packetloss_only.patch)
 
 
 
