@@ -1,0 +1,7 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/digital_core.sv	2026-05-11 12:25:15.479744000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/digital_core.sv	2026-05-11 12:25:08.738709000 -0700
+@@ -105 +105 @@
+-    input logic [7:0] runtime_id,         // simulator runtime id (unused in this RTL)
++    input logic [7:0] runtime_id,         // simulator runtime id for PRNG seeding
+@@ -459,0 +460 @@
++    .runtime_id                 (runtime_id),

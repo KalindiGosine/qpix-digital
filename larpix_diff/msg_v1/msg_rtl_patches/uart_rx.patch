@@ -1,0 +1,29 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/uart_rx.sv	2026-05-06 10:33:22.238148000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/uart_rx.sv	2026-05-11 11:01:48.826207000 -0700
+@@ -27,0 +28 @@
++logic [7:0] target_len;   // received word width for this packet
+@@ -32,0 +34 @@
++logic [7:0]               target_len_next;
+@@ -35,0 +38,2 @@
++`include "larpix_constants.sv"
++
+@@ -52,0 +57 @@
++    target_len_next = target_len;
+@@ -60,0 +66 @@
++            target_len_next = WIDTH[7:0];
+@@ -67 +73,8 @@
+-        if (bit_cnt == WIDTH-1) begin
++        if (bit_cnt == 6'd1) begin
++            if ({rx_sync, shift_reg_next[0]} == MSG_OP)
++                target_len_next = MSG_WIDTH[7:0];
++            else
++                target_len_next = WIDTH[7:0];
++        end
++
++        if (bit_cnt == target_len-1'b1) begin
+@@ -81,0 +95 @@
++        target_len <= WIDTH[7:0];
+@@ -103,0 +118 @@
++        target_len <= target_len_next;
+@@ -122 +136,0 @@
+-

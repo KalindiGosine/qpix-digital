@@ -1,0 +1,79 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv	2026-05-06 10:53:46.089935000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/hydra_ctrl.sv	2026-05-11 11:52:00.463843000 -0700
+@@ -23,0 +24 @@
++    output logic msg_read_n,       // active low read signal for msg fifo
+@@ -26,0 +28,2 @@
++    input logic msg_fifo_empty,
++    input logic [WIDTH-1:0] msg_fifo_data,
+@@ -66,0 +70,5 @@
++logic rr_prefer_msg;
++logic tx_sel_msg;
++logic tx_sel_msg_next;
++logic [WIDTH-1:0] tx_send_data;
++logic [NUM_UARTS-1:0] tx_send_mask;
+@@ -99,0 +108,8 @@
++function automatic logic pkt_is_downstream(
++    input logic [WIDTH-1:0] raw_pkt);
++    if (raw_pkt[1:0] == MSG_OP)
++        return raw_pkt[MSG_DOWNSTREAM_BIT];
++    else
++        return raw_pkt[FULL_DOWNSTREAM_BIT];
++endfunction
++
+@@ -144,0 +161,22 @@
++
++always_comb begin
++    if (fifo_empty && !msg_fifo_empty)
++        tx_sel_msg_next = 1'b1;
++    else if (!fifo_empty && msg_fifo_empty)
++        tx_sel_msg_next = 1'b0;
++    else if (!fifo_empty && !msg_fifo_empty)
++        tx_sel_msg_next = rr_prefer_msg;
++    else
++        tx_sel_msg_next = 1'b0;
++end
++
++always_comb begin
++    tx_send_data = tx_sel_msg ? msg_fifo_data : fifo_rd_data;
++end
++
++always_comb begin
++    if (tx_sel_msg_next)
++        tx_send_mask = enable_piso_upstream | enable_piso_downstream;
++    else
++        tx_send_mask = enable_piso_downstream;
++end
+@@ -159 +197,2 @@
+-            else if (!fifo_empty && ((tx_busy & enable_piso_downstream) == '0))
++            else if ((!fifo_empty || !msg_fifo_empty) &&
++                    ((tx_busy & tx_send_mask) == '0))
+@@ -163 +202 @@
+-                && (rx_data[62] == 0) )     Next = TX_UPSTREAM; 
++                && (pkt_is_downstream(rx_data) == 0) )     Next = TX_UPSTREAM; 
+@@ -176 +215 @@
+-            if ((tx_busy & enable_piso_downstream) != '0) Next = IDLE; 
++            if ((tx_busy & tx_send_mask) != '0) Next = IDLE; 
+@@ -191,0 +231 @@
++        msg_read_n <= 1'b1;
+@@ -192,0 +233,2 @@
++        rr_prefer_msg <= 1'b0;
++        tx_sel_msg <= 1'b0;
+@@ -197,0 +240 @@
++        msg_read_n <= 1'b1;
+@@ -236,2 +279,7 @@
+-                    if ((tx_busy & enable_piso_downstream) == 4'b0000)
+-                        fifo_read_n <= 1'b0;
++                    tx_sel_msg <= tx_sel_msg_next;
++                    if ((tx_busy & tx_send_mask) == 4'b0000) begin
++                        if (tx_sel_msg_next)
++                            msg_read_n <= 1'b0;
++                        else
++                            fifo_read_n <= 1'b0;
++                    end
+@@ -242 +290 @@
+-                        tx_data_uart[i] <= fifo_rd_data;
++                        tx_data_uart[i] <= tx_send_data;
+@@ -244 +292,2 @@
+-                    ld_tx_data_uart <= enable_piso_downstream;
++                    ld_tx_data_uart <= tx_sel_msg ? (enable_piso_upstream | enable_piso_downstream) : enable_piso_downstream;
++                    rr_prefer_msg <= ~tx_sel_msg;

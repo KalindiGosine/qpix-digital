@@ -1,0 +1,10 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/uart.sv	2026-05-06 10:33:22.235152000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/uart.sv	2026-05-11 11:02:41.761054000 -0700
+@@ -13 +13 @@
+-//     1:0        | packet declaration (00: unused, 01: data,
++//     1:0        | packet declaration (00: msg, 01: data,
+@@ -14,0 +15,2 @@
++//   22           | downstream marker bit for msg packets
++//   23           | odd parity bit for msg packets
+@@ -89 +90,0 @@
+-

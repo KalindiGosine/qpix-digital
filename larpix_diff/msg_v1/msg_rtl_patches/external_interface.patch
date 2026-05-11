@@ -1,0 +1,42 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/external_interface.sv	2026-05-06 10:33:22.190142000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/external_interface.sv	2026-05-11 12:25:00.824697000 -0700
+@@ -23,0 +24 @@
++    input logic [7:0] runtime_id,   // simulator runtime id for local PRNG seeding
+@@ -43,0 +45,2 @@
++logic [WIDTH-1:0] msg_pkt_data;
++logic [WIDTH-1:0] msg_data_out;
+@@ -45,0 +49 @@
++logic msg_valid;
+@@ -47,0 +52 @@
++logic ready_for_msg;
+@@ -54,0 +60,2 @@
++logic msg_fifo_empty;
++logic msg_read_n;
+@@ -92,0 +100 @@
++    .msg_read_n             (msg_read_n),
+@@ -95,0 +104,2 @@
++    .msg_fifo_empty         (msg_fifo_empty),
++    .msg_fifo_data          (msg_data_out),
+@@ -110,0 +121,15 @@
++msg_logic
++    #(.WIDTH(WIDTH),
++    .GLOBAL_ID(GLOBAL_ID)
++    ) msg_logic_inst (
++    .msg_data_out      (msg_data_out),
++    .msg_fifo_empty    (msg_fifo_empty),
++    .ready_for_msg     (ready_for_msg),
++    .msg_data_in       (msg_pkt_data),
++    .msg_valid_in      (msg_valid),
++    .runtime_id        (runtime_id),
++    .chip_id           (chip_id),
++    .msg_read_n        (msg_read_n),
++    .clk               (clk),
++    .reset_n           (reset_n_clk));
++
+@@ -121,0 +147,2 @@
++    .msg_valid          (msg_valid),
++    .msg_pkt_data       (msg_pkt_data),
+@@ -126 +153,2 @@
+-    .ready_for_pkt   (ready_for_pkt),
++    .ready_for_pkt      (ready_for_pkt),
++    .ready_for_msg      (ready_for_msg),

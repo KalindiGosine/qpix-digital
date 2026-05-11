@@ -1,0 +1,75 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv	2026-05-06 10:50:51.668968000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/comms_ctrl.sv	2026-05-11 11:36:20.370912000 -0700
+@@ -22,0 +23,2 @@
++    output logic msg_valid,         // pulse to enqueue transformed MSG_OP packet
++    output logic [WIDTH-1:0] msg_pkt_data, // raw MSG_OP packet for msg_logic
+@@ -27,0 +30 @@
++    input logic ready_for_msg, // msg_logic fifo is ready for more data
+@@ -33 +36 @@
+-    //  Include the LArPix packet constants (CONFIG_WRITE_OP, etc.)
++    //  Include the LArPix packet constants (MSG_OP, CONFIG_WRITE_OP, etc.)
+@@ -37 +40 @@
+-    //  Bits [1:0]   : packet type (00‑11) -- 00 is an error
++    //  Bits [1:0]   : packet type (00‑11) -- 00 is MSG_OP
+@@ -41,2 +44,3 @@
+-    //  Bits [57:26] : magic number (used for validation)
+-    //  Bit  [63]    : odd parity (MSB)
++    //  Bits [57:26] : magic number (used for validation in config packets)
++    //  Bit  [23]    : odd parity for MSG_OP
++    //  Bit  [63]    : odd parity for 64-bit packets
+@@ -66 +70 @@
+-// i.e. total XOR of all 64 bits must be 1 (odd number of ones)
++// for MSG_OP, bit[23] must equal ~^rx_data[22:0]
+@@ -68,4 +72,6 @@
+-    if (rx_data[63] != ~^rx_data[62:0])
+-        parity_error = 1'b1;
+-    else
+-        parity_error = 1'b0;
++    case (rx_data[1:0])
++        MSG_OP:
++            parity_error = (rx_data[MSG_PARITY_BIT] != ~^rx_data[MSG_PARITY_BIT-1:0]);
++        default:
++            parity_error = (rx_data[FULL_PARITY_BIT] != ~^rx_data[FULL_PARITY_BIT-1:0]);
++    endcase
+@@ -83 +89 @@
+-    // malformed if type not recognized, magic number wrong, or parity bad
++    // malformed if type is invalid, magic number wrong, or parity bad
+@@ -85,4 +91,4 @@
+-        2'b00 : pkt_malformed = 1'b1;
+-        2'b01 : pkt_malformed = 1'b0;
+-        2'b10 : pkt_malformed = (pkt_magic != MAGIC_NUMBER) || parity_error;
+-        2'b11 : pkt_malformed = (pkt_magic != MAGIC_NUMBER) || parity_error;
++        MSG_OP           : pkt_malformed = parity_error;
++        DATA_OP          : pkt_malformed = 1'b0;
++        CONFIG_WRITE_OP  : pkt_malformed = (pkt_magic != MAGIC_NUMBER) || parity_error;
++        CONFIG_READ_OP   : pkt_malformed = (pkt_magic != MAGIC_NUMBER) || parity_error;
+@@ -169,2 +175 @@
+-        LOAD_FIFO : if (ready_for_pkt) Next = IDLE;  // reply packet built & sent
+-                      else Next = LOAD_FIFO; // retry
++        LOAD_FIFO : Next = IDLE;
+@@ -186,0 +192,2 @@
++        msg_valid         <= 1'b0;
++        msg_pkt_data      <= '0;
+@@ -196,0 +204,2 @@
++        msg_valid         <= 1'b0;
++        msg_pkt_data      <= '0;
+@@ -223 +232,2 @@
+-                //if this is a config read, then copy the
++                // if this is a local MSG_OP packet, enqueue it into msg_logic,
++                // or if this is a config read, then copy the
+@@ -238 +248,8 @@
+-                if ((rcvd_pkt[9:2] != chip_id) || 
++                if (rcvd_pkt[1:0] == MSG_OP) begin
++                    if (ready_for_msg) begin
++                        msg_pkt_data <= rcvd_pkt;
++                        msg_valid    <= 1'b1;
++                    end else begin
++                        dropped_packets <= dropped_packets + 1'b1;
++                    end
++                end else if ((rcvd_pkt[9:2] != chip_id) || 
+@@ -241,0 +259 @@
++                    pkt_valid  <= 1'b1;   // one‑cycle strobe
+@@ -250,0 +269 @@
++                    pkt_valid  <= 1'b1;   // one‑cycle strobe
+@@ -252 +270,0 @@
+-                pkt_valid  <= 1'b1;   // one‑cycle strobe

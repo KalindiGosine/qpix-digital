@@ -1,0 +1,29 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/uart_tx.sv	2026-05-06 10:33:22.242144000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/uart_tx.sv	2026-05-11 11:01:13.982060000 -0700
+@@ -5 +5,2 @@
+-//              UART word width is 64 bits.
++//              UART word width is 64 bits for data/config and 24 bits
++//              for MSG_OP packets.
+@@ -11 +12 @@
+-//     1:0        | packet declaration (00: unused, 01: data,
++//     1:0        | packet declaration (00: msg, 01: data,
+@@ -12,0 +14,2 @@
++//   22           | downstream marker bit for msg packets
++//   23           | odd parity bit for msg packets
+@@ -50,0 +54 @@
++logic [7:0] tx_len;
+@@ -51,0 +56,2 @@
++
++`include "larpix_constants.sv"
+@@ -58,0 +65 @@
++        tx_len <= WIDTH[7:0];
+@@ -63,0 +71 @@
++            tx_len <= (tx_data[1:0] == MSG_OP) ? MSG_WIDTH[7:0] : WIDTH[7:0];
+@@ -68,2 +76,2 @@
+-            if (tx_cnt > 8'b0 && tx_cnt <= WIDTH) tx_bit <= tx_reg[tx_cnt - 8'd1];
+-            if (tx_cnt > WIDTH) begin
++            if (tx_cnt > 8'b0 && tx_cnt <= tx_len) tx_bit <= tx_reg[tx_cnt - 8'd1];
++            if (tx_cnt > tx_len) begin
+@@ -90,2 +97,0 @@
+-
+-

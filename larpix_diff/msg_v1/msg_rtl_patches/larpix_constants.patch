@@ -1,0 +1,10 @@
+--- /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/larpix_v3c2/src/larpix_constants.sv	2026-05-06 10:33:22.205144000 -0700
++++ /home/lxusers/k/kalindigosine/snrlab-ic-q-pix-v1/chip_network_sim/larpix_network_sim/msg_rtl/src/larpix_constants.sv	2026-05-11 11:00:59.249044000 -0700
+@@ -95,0 +96 @@
++localparam logic[1:0] MSG_OP = 2'b00;
+@@ -98,0 +100,5 @@
++localparam int MSG_WIDTH = 24;
++localparam int MSG_PARITY_BIT = 23;
++localparam int MSG_DOWNSTREAM_BIT = 22;
++localparam int FULL_PARITY_BIT = 63;
++localparam int FULL_DOWNSTREAM_BIT = 62;
