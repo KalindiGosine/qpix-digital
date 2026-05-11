@@ -1,4 +1,4 @@
-diff -ruN larpix_network_sim/larpix_v3c/src/comms_ctrl.sv larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv
+diff -urN -U0 larpix_network_sim/larpix_v3c/src/comms_ctrl.sv larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv
 --- larpix_network_sim/larpix_v3c/src/comms_ctrl.sv	2026-04-29 20:26:56.175315000 -0700
 +++ larpix_network_sim/larpix_v3c2/src/comms_ctrl.sv	2026-05-06 10:50:51.668968000 -0700
 @@ -138,8 +138,8 @@
@@ -27,7 +27,7 @@ diff -ruN larpix_network_sim/larpix_v3c/src/comms_ctrl.sv larpix_network_sim/lar
                  end else begin
                      read_pkt <= {
                          1'b1,  // bit 62 = downstream flag
-diff -ruN larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv
+diff -urN -U0 larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv
 --- larpix_network_sim/larpix_v3c/src/hydra_ctrl.sv	2026-04-30 13:54:07.626848000 -0700
 +++ larpix_network_sim/larpix_v3c2/src/hydra_ctrl.sv	2026-05-06 10:53:46.089935000 -0700
 @@ -156,7 +156,8 @@
