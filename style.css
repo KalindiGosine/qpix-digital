@@ -185,6 +185,7 @@ kbd {
 .swatch.packet-config-write { background: #7cff7c; }
 .swatch.packet-config-read { background: #4db0ff; }
 .swatch.packet-event-data { background: #ff5e87; }
+.swatch.packet-msg { background: #ffcf4d; }
 .swatch.packet-other { background: #d7f06a; }
 
 .swatch.shared-fifo { background: #61e294; }

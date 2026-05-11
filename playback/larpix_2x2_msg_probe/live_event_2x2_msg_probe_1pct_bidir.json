@@ -1,0 +1,7570 @@
+{
+  "name": "2x2 msg_rtl probe",
+  "rtl_version": "msg_rtl",
+  "rows": 2,
+  "cols": 2,
+  "source": {
+    "x": 0,
+    "y": 0
+  },
+  "total_ticks": 2050,
+  "initial_chips": [
+    {
+      "x": 0,
+      "y": 0,
+      "chip_id": 0,
+      "up_mask": 3,
+      "down_mask": 4
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "chip_id": 1,
+      "up_mask": 1,
+      "down_mask": 8
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "chip_id": 2,
+      "up_mask": 0,
+      "down_mask": 4
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "chip_id": 3,
+      "up_mask": 0,
+      "down_mask": 4
+    }
+  ],
+  "chip_updates": [],
+  "chip_events": [],
+  "data_packet_metrics": {
+    "generated_by_chip": [],
+    "total_generated": 0,
+    "total_received_at_fpga": 0,
+    "total_arrivals_at_fpga": 0,
+    "total_lost": 0,
+    "delivery_ratio": null
+  },
+  "shared_fifo_updates": [
+    {
+      "tick": 0,
+      "x": 0,
+      "y": 0,
+      "runtime_id": 0,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 1,
+      "y": 0,
+      "runtime_id": 1,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 0,
+      "y": 1,
+      "runtime_id": 2,
+      "shared_fifo_occupancy": 0
+    },
+    {
+      "tick": 0,
+      "x": 1,
+      "y": 1,
+      "runtime_id": 3,
+      "shared_fifo_occupancy": 0
+    }
+  ],
+  "shared_fifo_max": 0,
+  "shared_fifo_capacity": 64,
+  "packet_spans": [
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004003fc",
+      "label": "chip[0] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004003fc",
+      "label": "chip[0] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c083fc",
+      "label": "chip[2] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c043fc",
+      "label": "chip[1] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c043fc",
+      "label": "chip[1] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 196,
+      "end_tick": 262,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040c3fc",
+      "label": "chip[3] payload[0000]",
+      "tx_complete_tick": 261,
+      "rx_complete_tick": 261
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c007fc",
+      "label": "chip[0] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c007fc",
+      "label": "chip[0] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004087fc",
+      "label": "chip[2] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004047fc",
+      "label": "chip[1] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004047fc",
+      "label": "chip[1] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 226,
+      "end_tick": 292,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0c7fc",
+      "label": "chip[3] payload[0001]",
+      "tx_complete_tick": 291,
+      "rx_complete_tick": 291
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004087fc",
+      "label": "chip[2] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004087fc",
+      "label": "chip[2] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c007fc",
+      "label": "chip[0] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0c7fc",
+      "label": "chip[3] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0c7fc",
+      "label": "chip[3] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 256,
+      "end_tick": 322,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004047fc",
+      "label": "chip[1] payload[0001]",
+      "tx_complete_tick": 321,
+      "rx_complete_tick": 321
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004047fc",
+      "label": "chip[1] payload[0001]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004047fc",
+      "label": "chip[1] payload[0001]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c007fc",
+      "label": "chip[0] payload[0001]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c007fc",
+      "label": "chip[0] payload[0001]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 286,
+      "end_tick": 352,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 351,
+      "rx_complete_tick": 351
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 316,
+      "end_tick": 382,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 381,
+      "rx_complete_tick": 381
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 346,
+      "end_tick": 412,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 411,
+      "rx_complete_tick": 411
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c00bfc",
+      "label": "chip[0] payload[0010]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000404bfc",
+      "label": "chip[1] payload[0010]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 376,
+      "end_tick": 442,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 441,
+      "rx_complete_tick": 441
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 406,
+      "end_tick": 472,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 471,
+      "rx_complete_tick": 471
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 436,
+      "end_tick": 502,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 501,
+      "rx_complete_tick": 501
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 466,
+      "end_tick": 532,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 531,
+      "rx_complete_tick": 531
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c04ffc",
+      "label": "chip[1] payload[0011]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000408bfc",
+      "label": "chip[2] payload[0010]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000400ffc",
+      "label": "chip[0] payload[0011]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 496,
+      "end_tick": 562,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0cbfc",
+      "label": "chip[3] payload[0010]",
+      "tx_complete_tick": 561,
+      "rx_complete_tick": 561
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 526,
+      "end_tick": 592,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 591,
+      "rx_complete_tick": 591
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 556,
+      "end_tick": 622,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 621,
+      "rx_complete_tick": 621
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 586,
+      "end_tick": 652,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 651,
+      "rx_complete_tick": 651
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004053fc",
+      "label": "chip[1] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 616,
+      "end_tick": 682,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c013fc",
+      "label": "chip[0] payload[0100]",
+      "tx_complete_tick": 681,
+      "rx_complete_tick": 681
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c08ffc",
+      "label": "chip[2] payload[0011]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040cffc",
+      "label": "chip[3] payload[0011]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 646,
+      "end_tick": 712,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 711,
+      "rx_complete_tick": 711
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 676,
+      "end_tick": 742,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 741,
+      "rx_complete_tick": 741
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 706,
+      "end_tick": 772,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 771,
+      "rx_complete_tick": 771
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 736,
+      "end_tick": 802,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 801,
+      "rx_complete_tick": 801
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c057fc",
+      "label": "chip[1] payload[0101]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004017fc",
+      "label": "chip[0] payload[0101]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 766,
+      "end_tick": 832,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 831,
+      "rx_complete_tick": 831
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004093fc",
+      "label": "chip[2] payload[0100]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 796,
+      "end_tick": 862,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0d3fc",
+      "label": "chip[3] payload[0100]",
+      "tx_complete_tick": 861,
+      "rx_complete_tick": 861
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 826,
+      "end_tick": 892,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 891,
+      "rx_complete_tick": 891
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 856,
+      "end_tick": 922,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 921,
+      "rx_complete_tick": 921
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 886,
+      "end_tick": 952,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 951,
+      "rx_complete_tick": 951
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c05bfc",
+      "label": "chip[1] payload[0110]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 916,
+      "end_tick": 982,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000401bfc",
+      "label": "chip[0] payload[0110]",
+      "tx_complete_tick": 981,
+      "rx_complete_tick": 981
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c097fc",
+      "label": "chip[2] payload[0101]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040d7fc",
+      "label": "chip[3] payload[0101]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1011,
+      "rx_complete_tick": 1011
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1041,
+      "rx_complete_tick": 1041
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1071,
+      "rx_complete_tick": 1071
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1101,
+      "rx_complete_tick": 1101
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000405ffc",
+      "label": "chip[1] payload[0111]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c01ffc",
+      "label": "chip[0] payload[0111]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 1131,
+      "rx_complete_tick": 1131
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c09bfc",
+      "label": "chip[2] payload[0110]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040dbfc",
+      "label": "chip[3] payload[0110]",
+      "tx_complete_tick": 1161,
+      "rx_complete_tick": 1161
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1191,
+      "rx_complete_tick": 1191
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1221,
+      "rx_complete_tick": 1221
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1251,
+      "rx_complete_tick": 1251
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004063fc",
+      "label": "chip[1] payload[1000]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c023fc",
+      "label": "chip[0] payload[1000]",
+      "tx_complete_tick": 1281,
+      "rx_complete_tick": 1281
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000409ffc",
+      "label": "chip[2] payload[0111]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0dffc",
+      "label": "chip[3] payload[0111]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1311,
+      "rx_complete_tick": 1311
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1341,
+      "rx_complete_tick": 1341
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1371,
+      "rx_complete_tick": 1371
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1401,
+      "rx_complete_tick": 1401
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c067fc",
+      "label": "chip[1] payload[1001]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004027fc",
+      "label": "chip[0] payload[1001]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1431,
+      "rx_complete_tick": 1431
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040a3fc",
+      "label": "chip[2] payload[1000]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0e3fc",
+      "label": "chip[3] payload[1000]",
+      "tx_complete_tick": 1461,
+      "rx_complete_tick": 1461
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1491,
+      "rx_complete_tick": 1491
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1521,
+      "rx_complete_tick": 1521
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1551,
+      "rx_complete_tick": 1551
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c06bfc",
+      "label": "chip[1] payload[1010]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000402bfc",
+      "label": "chip[0] payload[1010]",
+      "tx_complete_tick": 1581,
+      "rx_complete_tick": 1581
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0a7fc",
+      "label": "chip[2] payload[1001]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040e7fc",
+      "label": "chip[3] payload[1001]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1611,
+      "rx_complete_tick": 1611
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1641,
+      "rx_complete_tick": 1641
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1671,
+      "rx_complete_tick": 1671
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1701,
+      "rx_complete_tick": 1701
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000406ffc",
+      "label": "chip[1] payload[1011]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c02ffc",
+      "label": "chip[0] payload[1011]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1731,
+      "rx_complete_tick": 1731
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0abfc",
+      "label": "chip[2] payload[1010]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040ebfc",
+      "label": "chip[3] payload[1010]",
+      "tx_complete_tick": 1761,
+      "rx_complete_tick": 1761
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1791,
+      "rx_complete_tick": 1791
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1821,
+      "rx_complete_tick": 1821
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1851,
+      "rx_complete_tick": 1851
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c073fc",
+      "label": "chip[1] payload[1100]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004033fc",
+      "label": "chip[0] payload[1100]",
+      "tx_complete_tick": 1881,
+      "rx_complete_tick": 1881
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040affc",
+      "label": "chip[2] payload[1011]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040b7fc",
+      "label": "chip[2] payload[1101]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0effc",
+      "label": "chip[3] payload[1011]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0f7fc",
+      "label": "chip[3] payload[1101]",
+      "tx_complete_tick": 1911,
+      "rx_complete_tick": 1911
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c0b3fc",
+      "label": "chip[2] payload[1100]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004077fc",
+      "label": "chip[1] payload[1101]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x000000000040f3fc",
+      "label": "chip[3] payload[1100]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c037fc",
+      "label": "chip[0] payload[1101]",
+      "tx_complete_tick": 1941,
+      "rx_complete_tick": 1941
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        0,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c037fc",
+      "label": "chip[0] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        0,
+        0
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c037fc",
+      "label": "chip[0] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        0,
+        1
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x0000000000c037fc",
+      "label": "chip[0] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        0,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004077fc",
+      "label": "chip[1] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        1,
+        0
+      ],
+      "dst": [
+        1,
+        1
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004077fc",
+      "label": "chip[1] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    },
+    {
+      "type": "packet_move",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "src": [
+        1,
+        1
+      ],
+      "dst": [
+        1,
+        0
+      ],
+      "packet_type": "msg_packet",
+      "packet_word": "0x00000000004077fc",
+      "label": "chip[1] payload[1101]",
+      "tx_complete_tick": 1971,
+      "rx_complete_tick": 1971
+    }
+  ],
+  "fpga_spans": [],
+  "fpga_events": [
+    {
+      "direction": "rx",
+      "start_tick": 196,
+      "end_tick": 262,
+      "complete_tick": 261,
+      "packet_word": "0x00000000004003fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 0,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 226,
+      "end_tick": 292,
+      "complete_tick": 291,
+      "packet_word": "0x0000000000c007fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 1,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 256,
+      "end_tick": 322,
+      "complete_tick": 321,
+      "packet_word": "0x00000000004087fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 33,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 286,
+      "end_tick": 352,
+      "complete_tick": 351,
+      "packet_word": "0x00000000004047fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 17,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 316,
+      "end_tick": 382,
+      "complete_tick": 381,
+      "packet_word": "0x0000000000408bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 34,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 346,
+      "end_tick": 412,
+      "complete_tick": 411,
+      "packet_word": "0x0000000000404bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 18,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 376,
+      "end_tick": 442,
+      "complete_tick": 441,
+      "packet_word": "0x0000000000c00bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 2,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 406,
+      "end_tick": 472,
+      "complete_tick": 471,
+      "packet_word": "0x0000000000c0cbfc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[0010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 50,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 436,
+      "end_tick": 502,
+      "complete_tick": 501,
+      "packet_word": "0x0000000000400ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 3,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 466,
+      "end_tick": 532,
+      "complete_tick": 531,
+      "packet_word": "0x0000000000c08ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 35,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 496,
+      "end_tick": 562,
+      "complete_tick": 561,
+      "packet_word": "0x0000000000c04ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 19,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 526,
+      "end_tick": 592,
+      "complete_tick": 591,
+      "packet_word": "0x00000000004093fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 36,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 556,
+      "end_tick": 622,
+      "complete_tick": 621,
+      "packet_word": "0x00000000004053fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 20,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 586,
+      "end_tick": 652,
+      "complete_tick": 651,
+      "packet_word": "0x0000000000c013fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 4,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 616,
+      "end_tick": 682,
+      "complete_tick": 681,
+      "packet_word": "0x0000000000c0d3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[0100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 52,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 646,
+      "end_tick": 712,
+      "complete_tick": 711,
+      "packet_word": "0x0000000000c08ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 35,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 676,
+      "end_tick": 742,
+      "complete_tick": 741,
+      "packet_word": "0x00000000004093fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 36,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 706,
+      "end_tick": 772,
+      "complete_tick": 771,
+      "packet_word": "0x00000000004017fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 5,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 736,
+      "end_tick": 802,
+      "complete_tick": 801,
+      "packet_word": "0x0000000000c097fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 37,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 766,
+      "end_tick": 832,
+      "complete_tick": 831,
+      "packet_word": "0x0000000000c057fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 21,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 796,
+      "end_tick": 862,
+      "complete_tick": 861,
+      "packet_word": "0x0000000000c09bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0110]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 38,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 826,
+      "end_tick": 892,
+      "complete_tick": 891,
+      "packet_word": "0x0000000000c05bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0110]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 22,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 856,
+      "end_tick": 922,
+      "complete_tick": 921,
+      "packet_word": "0x0000000000401bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0110]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 6,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 886,
+      "end_tick": 952,
+      "complete_tick": 951,
+      "packet_word": "0x000000000040dbfc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[0110]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 54,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 916,
+      "end_tick": 982,
+      "complete_tick": 981,
+      "packet_word": "0x0000000000c097fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 37,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 946,
+      "end_tick": 1012,
+      "complete_tick": 1011,
+      "packet_word": "0x0000000000c097fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 37,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 976,
+      "end_tick": 1042,
+      "complete_tick": 1041,
+      "packet_word": "0x0000000000c09bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0110]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 38,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1006,
+      "end_tick": 1072,
+      "complete_tick": 1071,
+      "packet_word": "0x0000000000c01ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[0111]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 7,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1036,
+      "end_tick": 1102,
+      "complete_tick": 1101,
+      "packet_word": "0x0000000000409ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0111]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 39,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1066,
+      "end_tick": 1132,
+      "complete_tick": 1131,
+      "packet_word": "0x0000000000405ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[0111]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 23,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1096,
+      "end_tick": 1162,
+      "complete_tick": 1161,
+      "packet_word": "0x000000000040a3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 40,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1126,
+      "end_tick": 1192,
+      "complete_tick": 1191,
+      "packet_word": "0x00000000004063fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[1000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 24,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1156,
+      "end_tick": 1222,
+      "complete_tick": 1221,
+      "packet_word": "0x0000000000c023fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 8,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1186,
+      "end_tick": 1252,
+      "complete_tick": 1251,
+      "packet_word": "0x0000000000c0e3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[1000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 56,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1216,
+      "end_tick": 1282,
+      "complete_tick": 1281,
+      "packet_word": "0x0000000000409ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0111]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 39,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1246,
+      "end_tick": 1312,
+      "complete_tick": 1311,
+      "packet_word": "0x0000000000409ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[0111]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 39,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1276,
+      "end_tick": 1342,
+      "complete_tick": 1341,
+      "packet_word": "0x000000000040a3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1000]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 40,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1306,
+      "end_tick": 1372,
+      "complete_tick": 1371,
+      "packet_word": "0x00000000004027fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 9,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1336,
+      "end_tick": 1402,
+      "complete_tick": 1401,
+      "packet_word": "0x0000000000c0a7fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 41,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1366,
+      "end_tick": 1432,
+      "complete_tick": 1431,
+      "packet_word": "0x0000000000c067fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[1001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 25,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1396,
+      "end_tick": 1462,
+      "complete_tick": 1461,
+      "packet_word": "0x0000000000c0abfc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 42,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1426,
+      "end_tick": 1492,
+      "complete_tick": 1491,
+      "packet_word": "0x0000000000c06bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[1010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 26,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1456,
+      "end_tick": 1522,
+      "complete_tick": 1521,
+      "packet_word": "0x0000000000402bfc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 10,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1486,
+      "end_tick": 1552,
+      "complete_tick": 1551,
+      "packet_word": "0x000000000040ebfc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[1010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 58,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1516,
+      "end_tick": 1582,
+      "complete_tick": 1581,
+      "packet_word": "0x0000000000c0a7fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 41,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1546,
+      "end_tick": 1612,
+      "complete_tick": 1611,
+      "packet_word": "0x0000000000c0a7fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1001]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 41,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1576,
+      "end_tick": 1642,
+      "complete_tick": 1641,
+      "packet_word": "0x0000000000c0abfc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1010]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 42,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1606,
+      "end_tick": 1672,
+      "complete_tick": 1671,
+      "packet_word": "0x0000000000c02ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 11,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1636,
+      "end_tick": 1702,
+      "complete_tick": 1701,
+      "packet_word": "0x000000000040affc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 43,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1666,
+      "end_tick": 1732,
+      "complete_tick": 1731,
+      "packet_word": "0x0000000000406ffc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[1011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 27,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1696,
+      "end_tick": 1762,
+      "complete_tick": 1761,
+      "packet_word": "0x0000000000c0b3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 44,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1726,
+      "end_tick": 1792,
+      "complete_tick": 1791,
+      "packet_word": "0x0000000000c073fc",
+      "packet_type": "msg_packet",
+      "label": "chip[1] payload[1100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 28,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1756,
+      "end_tick": 1822,
+      "complete_tick": 1821,
+      "packet_word": "0x00000000004033fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 12,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1786,
+      "end_tick": 1852,
+      "complete_tick": 1851,
+      "packet_word": "0x000000000040f3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[3] payload[1100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 60,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1816,
+      "end_tick": 1882,
+      "complete_tick": 1881,
+      "packet_word": "0x000000000040affc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 43,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1846,
+      "end_tick": 1912,
+      "complete_tick": 1911,
+      "packet_word": "0x000000000040affc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1011]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 43,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1876,
+      "end_tick": 1942,
+      "complete_tick": 1941,
+      "packet_word": "0x0000000000c0b3fc",
+      "packet_type": "msg_packet",
+      "label": "chip[2] payload[1100]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 44,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    },
+    {
+      "direction": "rx",
+      "start_tick": 1906,
+      "end_tick": 1972,
+      "complete_tick": 1971,
+      "packet_word": "0x0000000000c037fc",
+      "packet_type": "msg_packet",
+      "label": "chip[0] payload[1101]",
+      "decode": {
+        "kind": "msg",
+        "decoded": {
+          "packet_type": 0,
+          "chip_id": 255,
+          "msg_payload": 13,
+          "downstream": 1,
+          "odd_parity_ok": true,
+          "on_wire_bits": 24
+        },
+        "odd_parity_ok": true
+      }
+    }
+  ]
+}

@@ -32,6 +32,7 @@ const dataPacketMetricsListEl = document.getElementById('dataPacketMetricsList')
 const filterConfigWriteEl = document.getElementById('filterConfigWrite');
 const filterConfigReadEl = document.getElementById('filterConfigRead');
 const filterEventDataEl = document.getElementById('filterEventData');
+const filterMsgPacketEl = document.getElementById('filterMsgPacket');
 const filterOtherPacketEl = document.getElementById('filterOtherPacket');
 const filterSharedFifoEl = document.getElementById('filterSharedFifo');
 const filterPacketLabelsEl = document.getElementById('filterPacketLabels');
@@ -228,6 +229,7 @@ function packetCategory(packetType) {
   if (packetType === 'config_write') return 'config_write';
   if (packetType === 'config_read_request' || packetType === 'config_read_reply') return 'config_read';
   if (packetType === 'event_data') return 'event_data';
+  if (packetType === 'msg_packet') return 'msg_packet';
   return 'other';
 }
 
@@ -237,6 +239,7 @@ function packetColor(packetType) {
     config_write: '#7cff7c',
     config_read: '#4db0ff',
     event_data: '#ff5e87',
+    msg_packet: '#ffcf4d',
     other: '#d7f06a',
   }[category] || '#d7f06a';
 }
@@ -246,6 +249,7 @@ function packetCategoryVisible(packetType) {
   if (category === 'config_write') return Boolean(filterConfigWriteEl?.checked);
   if (category === 'config_read') return Boolean(filterConfigReadEl?.checked);
   if (category === 'event_data') return Boolean(filterEventDataEl?.checked);
+  if (category === 'msg_packet') return Boolean(filterMsgPacketEl?.checked);
   return Boolean(filterOtherPacketEl?.checked);
 }
 
@@ -547,6 +551,7 @@ function parseChipDebugCsv(text) {
   const headers = lines[0].split(',');
   const rows = [];
   const rowsByTick = new Map();
+  const ticks = [];
   for (const line of lines.slice(1)) {
     const parts = line.split(',');
     if (parts.length !== headers.length) continue;
@@ -555,9 +560,11 @@ function parseChipDebugCsv(text) {
       row[headers[i]] = parseChipDebugValue(parts[i]);
     }
     rows.push(row);
-    rowsByTick.set(Number(row.tick || 0), row);
+    const tick = Number(row.tick || 0);
+    rowsByTick.set(tick, row);
+    ticks.push(tick);
   }
-  return { headers, rows, rowsByTick };
+  return { headers, rows, rowsByTick, ticks };
 }
 
 function parseMaskValue(value) {
@@ -582,6 +589,22 @@ function hydraStateName(value) {
   return HYDRA_STATE_NAMES[Number(value)] || `STATE_${value}`;
 }
 
+function packetOpcode(value) {
+  if (typeof value === 'string' && value.startsWith('0x')) {
+    return Number.parseInt(value.slice(-1), 16) & 0x3;
+  }
+  return Number(value || 0) & 0x3;
+}
+
+function packetTypeNameFromWord(value) {
+  const opcode = packetOpcode(value);
+  if (opcode === 0) return 'MSG_OP';
+  if (opcode === 1) return 'DATA_OP';
+  if (opcode === 2) return 'CONFIG_WRITE_OP';
+  if (opcode === 3) return 'CONFIG_READ_OP';
+  return `OP_${opcode}`;
+}
+
 function formatHexWord(value) {
   const text = String(value || '0x0000000000000000');
   if (text === '0x0000000000000000') return '—';
@@ -595,7 +618,24 @@ function abbreviateWord(value) {
 }
 
 function chipDebugRowAtTick(tick) {
-  return chipDebugData?.rowsByTick?.get(Number(tick || 0)) || null;
+  if (!chipDebugData) return null;
+  const target = Number(tick || 0);
+  const direct = chipDebugData.rowsByTick?.get(target);
+  if (direct) return direct;
+  const ticks = chipDebugData.ticks || [];
+  let lo = 0;
+  let hi = ticks.length - 1;
+  let best = -1;
+  while (lo <= hi) {
+    const mid = Math.floor((lo + hi) / 2);
+    if (ticks[mid] <= target) {
+      best = mid;
+      lo = mid + 1;
+    } else {
+      hi = mid - 1;
+    }
+  }
+  return best >= 0 ? chipDebugData.rowsByTick.get(ticks[best]) || null : null;
 }
 
 async function tryLoadChipDebugForPlayback(obj, sourceUrl) {
@@ -832,7 +872,7 @@ function drawChipInternalView(width, height) {
     monitorChip = state?.get(`${playback.source.x},${playback.source.y}`) || null;
   }
 
-  const scale = Math.max(0.72, Math.min(1.05, Math.min(availableW / 1120, availableH / 610)));
+  const scale = Math.max(0.68, Math.min(1.0, Math.min(availableW / 1260, availableH / 720)));
   const ox = marginLeft + Math.max(10, (availableW - 1120 * scale) * 0.5);
   const oy = margin + Math.max(10, (availableH - 610 * scale) * 0.5);
   const sx = (value) => ox + value * scale;
@@ -863,13 +903,23 @@ function drawChipInternalView(width, height) {
     west: { left: sx(0), top: sy(480), width: sw(250), height: sw(104) },
   };
   const hydraRect = { left: sx(335), top: sy(170), width: sw(300), height: sw(210) };
-  const commsRect = { left: sx(715), top: sy(118), width: sw(245), height: sw(145) };
-  const fifoRect = { left: sx(715), top: sy(332), width: sw(245), height: sw(132) };
-  const txRect = { left: sx(420), top: sy(462), width: sw(135), height: sw(108) };
+  const commsRect = { left: sx(715), top: sy(96), width: sw(260), height: sw(150) };
+  const msgLogicRect = { left: sx(1020), top: sy(82), width: sw(220), height: sw(150) };
+  const msgFifoRect = { left: sx(1020), top: sy(282), width: sw(220), height: sw(150) };
+  const fifoRect = { left: sx(715), top: sy(322), width: sw(260), height: sw(150) };
+  const txRect = { left: sx(430), top: sy(530), width: sw(145), height: sw(108) };
 
   const laneWord = (lane) => formatHexWord(row[`${lane}_rx_data`]);
   const holdWord = (lane) => formatHexWord(row[`${lane}_hold_reg`]);
   const laneActive = (lane) => Number(row[`${lane}_rx_empty`] || 0) === 0 || Number(row[`${lane}_hold_valid`] || 0) === 1 || maskHasLane(row.hydra_sel_onehot, EDGE_TO_BIT[lane]) || maskHasLane(row.hydra_uld_rx_data_uart, EDGE_TO_BIT[lane]);
+  const commsPacketWord = formatHexWord(row.hydra_comms_rcvd_pkt);
+  const commsPacketType = packetTypeNameFromWord(row.hydra_comms_rcvd_pkt);
+  const commsRoutesToMsg = Number(row.msg_valid || 0) === 1;
+  const commsRoutesToShared = Number(row.hydra_pkt_valid || 0) === 1 || Number(row.hydra_fifo_write_n || 0) === 0;
+  const msgGenerated = Number(row.msg_generated_valid || 0) === 1;
+  const msgFifoOccupancy = Number(row.msg_fifo_counter_debug || 0);
+  const msgFifoActive = msgGenerated || commsRoutesToMsg || msgFifoOccupancy > 0 || Number(row.msg_fifo_read_n || 1) === 0;
+  const msgSourceLabel = commsRoutesToMsg ? 'from comms_ctrl' : (msgGenerated ? 'local generator' : 'idle');
 
   for (const lane of ['north', 'east', 'south', 'west']) {
     drawComponentBox(
@@ -906,11 +956,29 @@ function drawChipInternalView(width, height) {
     'Comms Ctrl',
     [
       `busy: ${row.hydra_comms_busy}`,
-      `pkt_valid: ${row.hydra_pkt_valid}`,
-      `rcvd_pkt: ${abbreviateWord(formatHexWord(row.hydra_comms_rcvd_pkt))}`,
+      `type: ${commsPacketWord === '—' ? '—' : commsPacketType}`,
+      `shared pkt_valid: ${row.hydra_pkt_valid}`,
+      `msg_valid: ${row.msg_valid ?? '—'}`,
+      `route: ${commsRoutesToMsg ? 'msg_logic' : commsRoutesToShared ? 'shared fifo' : 'idle'}`,
+      `rcvd_pkt: ${abbreviateWord(commsPacketWord)}`,
       `read_pkt: ${abbreviateWord(formatHexWord(row.hydra_comms_read_pkt))}`,
     ],
     { active: Number(row.hydra_rx_data_flag || 0) === 1 || formatHexWord(row.hydra_comms_rcvd_pkt) !== '—', accent: '#7cff7c' },
+  );
+
+  drawComponentBox(
+    msgLogicRect,
+    'Msg Logic',
+    [
+      `ready_for_msg: ${row.ready_for_msg ?? '—'}`,
+      `msg_valid_in: ${row.msg_valid ?? '—'}`,
+      `generated: ${row.msg_generated_valid ?? '—'}`,
+      `fifo_write_n: ${row.msg_fifo_write_n ?? '—'}`,
+      `source: ${msgSourceLabel}`,
+      `msg_in: ${abbreviateWord(formatHexWord(row.msg_pkt_data))}`,
+      `fifo_data_in: ${abbreviateWord(formatHexWord(row.msg_fifo_data_in))}`,
+    ],
+    { active: msgGenerated || commsRoutesToMsg || Number(row.msg_fifo_write_n || 1) === 0, accent: '#ffcf4d' },
   );
 
   const txActive = [3, 4, 5].includes(Number(row.hydra_state)) || [3, 4, 5].includes(Number(row.hydra_next_state));
@@ -937,14 +1005,30 @@ function drawChipInternalView(width, height) {
     ],
     { active: Number(row.hydra_fifo_write_n || 0) === 0 || sharedFifoOccupancyAt(monitorChip?.x || 0, monitorChip?.y || 0, currentTickIndex) > 0, accent: '#61e294' },
   );
+
+  drawComponentBox(
+    msgFifoRect,
+    'Msg FIFO',
+    [
+      `occupancy: ${msgFifoOccupancy}/4`,
+      `empty: ${row.msg_fifo_empty ?? '—'}`,
+      `read_n: ${row.msg_fifo_read_n ?? '—'}`,
+      `data_out: ${abbreviateWord(formatHexWord(row.msg_fifo_data_out))}`,
+      `mem0: ${abbreviateWord(formatHexWord(row.msg_fifo_mem0))}`,
+      `mem1: ${abbreviateWord(formatHexWord(row.msg_fifo_mem1))}`,
+    ],
+    { active: msgFifoActive, accent: '#ffcf4d' },
+  );
+
   drawComponentBox(
     txRect,
     'UART TX',
     [
       `outbound: ${outboundPacket ? outboundPacket.packet_type : 'idle'}`,
-      `fifo_rd_data: ${abbreviateWord(formatHexWord(row.hydra_fifo_rd_data))}`,
+      `shared data: ${abbreviateWord(formatHexWord(row.hydra_fifo_rd_data))}`,
+      `msg data: ${abbreviateWord(formatHexWord(row.msg_fifo_data_out))}`,
       `packet event: ${abbreviateWord(outboundPacket?.packet_word || '—')}`,
-      `source: Hydra Ctrl`,
+      `source: ${Number(row.msg_fifo_read_n || 1) === 0 ? 'msg_fifo via Hydra' : 'Hydra Ctrl'}`,
     ],
     { active: txActive || Boolean(outboundPacket), accent: '#d7a6ff' },
   );
@@ -958,8 +1042,11 @@ function drawChipInternalView(width, height) {
   }
 
   drawFlowArrow(hydraRect.left + hydraRect.width, hydraRect.top + hydraRect.height * 0.34, commsRect.left, commsRect.top + commsRect.height * 0.38, '#7cff7c', Number(row.hydra_rx_data_flag || 0) === 1 || formatHexWord(row.hydra_comms_rcvd_pkt) !== '—', Number(row.hydra_rx_data_flag || 0) === 1 ? 'rx_data_flag' : 'stale/current');
-  drawFlowArrow(commsRect.left + commsRect.width * 0.5, commsRect.top + commsRect.height, fifoRect.left + fifoRect.width * 0.5, fifoRect.top, '#61e294', Number(row.hydra_fifo_write_n || 0) === 0 || Number(row.hydra_pkt_valid || 0) === 1, Number(row.hydra_fifo_write_n || 0) === 0 ? 'fifo write' : 'idle');
-  drawFlowArrow(fifoRect.left, fifoRect.top + fifoRect.height * 0.5, hydraRect.left + hydraRect.width * 0.72, hydraRect.top + hydraRect.height, '#d7a6ff', txActive || Boolean(outboundPacket), txActive ? 'TX_GET_FIFO' : 'idle');
+  drawFlowArrow(commsRect.left + commsRect.width, commsRect.top + commsRect.height * 0.4, msgLogicRect.left, msgLogicRect.top + msgLogicRect.height * 0.4, '#ffcf4d', commsRoutesToMsg, commsRoutesToMsg ? 'MSG_OP -> msg_logic' : 'MSG path');
+  drawFlowArrow(commsRect.left + commsRect.width * 0.45, commsRect.top + commsRect.height, fifoRect.left + fifoRect.width * 0.5, fifoRect.top, '#61e294', commsRoutesToShared, commsRoutesToShared ? 'non-MSG -> shared' : 'shared path');
+  drawFlowArrow(msgLogicRect.left + msgLogicRect.width * 0.5, msgLogicRect.top + msgLogicRect.height, msgFifoRect.left + msgFifoRect.width * 0.5, msgFifoRect.top, '#ffcf4d', Number(row.msg_fifo_write_n || 1) === 0, Number(row.msg_fifo_write_n || 1) === 0 ? 'enqueue' : 'idle');
+  drawFlowArrow(msgFifoRect.left, msgFifoRect.top + msgFifoRect.height * 0.62, hydraRect.left + hydraRect.width * 0.84, hydraRect.top + hydraRect.height, '#ffcf4d', Number(row.msg_fifo_read_n || 1) === 0 || msgFifoOccupancy > 0, Number(row.msg_fifo_read_n || 1) === 0 ? 'msg read' : 'queued');
+  drawFlowArrow(fifoRect.left, fifoRect.top + fifoRect.height * 0.5, hydraRect.left + hydraRect.width * 0.72, hydraRect.top + hydraRect.height, '#61e294', txActive || Boolean(outboundPacket), txActive ? 'shared read' : 'idle');
   drawFlowArrow(hydraRect.left + hydraRect.width * 0.5, hydraRect.top + hydraRect.height, txRect.left + txRect.width * 0.5, txRect.top, '#d7a6ff', txActive || Boolean(outboundPacket), txActive ? 'TX_SEND' : 'idle');
 
   updateHud();
@@ -1188,6 +1275,7 @@ canvas.addEventListener('click', handleCanvasClick);
 filterConfigWriteEl?.addEventListener('change', draw);
 filterConfigReadEl?.addEventListener('change', draw);
 filterEventDataEl?.addEventListener('change', draw);
+filterMsgPacketEl?.addEventListener('change', draw);
 filterOtherPacketEl?.addEventListener('change', draw);
 filterSharedFifoEl?.addEventListener('change', draw);
 filterPacketLabelsEl?.addEventListener('change', draw);
@@ -1260,7 +1348,7 @@ function animate(ts) {
 
 applyHudWidth(loadHudWidth());
 resize();
-const playbackUrl = new URLSearchParams(window.location.search).get('playback') || './playback/live_event_3x5_chip14.json';
+const playbackUrl = new URLSearchParams(window.location.search).get('playback') || '../../../build/larpix_2x2_msg_probe/live_event_2x2_msg_probe.json';
 loadPlaybackFromUrl(playbackUrl).catch((error) => {
   scenarioEl.textContent = 'Scenario: failed to load sample';
   selectionEl.textContent = error.message;

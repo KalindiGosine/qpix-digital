@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LArPix Event Playback Visualizer</title>
-  <link rel="stylesheet" href="style.css?v=chip-view-4">
+  <link rel="stylesheet" href="style.css?v=chip-view-6">
 </head>
 <body>
   <aside id="hud">
@@ -53,6 +53,11 @@
         <input id="filterEventData" type="checkbox" checked>
         <span class="swatch packet-event-data"></span>
         <span class="filter-label">data packets</span>
+      </label>
+      <label class="filter-item">
+        <input id="filterMsgPacket" type="checkbox" checked>
+        <span class="swatch packet-msg"></span>
+        <span class="filter-label">msg packets</span>
       </label>
       <label class="filter-item">
         <input id="filterOtherPacket" type="checkbox" checked>
@@ -132,6 +137,6 @@
     <div id="runMetricsPopupBody" class="floating-panel-body"></div>
   </div>
   <canvas id="board"></canvas>
-  <script type="module" src="main.js?v=chip-view-4"></script>
+  <script type="module" src="main.js?v=chip-view-6"></script>
 </body>
 </html>
